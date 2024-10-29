@@ -40,6 +40,7 @@ const SoiKeoDetails = () => {
         <div className='soikeo_chitiet pb-5 mb-5'>
             <div className='py-4 px-5 soikeo_delails'>
                 <div className='match_name  soikeo_delails_one'>
+                
                     <div className='match_team_one '>
                         <p>Machester</p>
                         <img src={mulog} alt='' width='40%' />

@@ -1,12 +1,16 @@
-
 .main_live_padding {
-  .livestream-notification{
+  .livestream-notification {
     background-color: #0043ff;
     border-radius: 50px;
     height: 29px;
     margin: 10px 0;
+    display: flex;
+    flex-direction: row;
     img {
       padding-left: 5px;
+    }
+    .ln-text {
+      padding-top: 2px;
     }
   }
 }
@@ -14,13 +18,11 @@
 .main_video_live {
   display: flex;
   flex-direction: row;
-
 }
 
 .live_main_title .live_toggle {
   font-size: 25px;
-  color: #FF4500;
-
+  color: #ff4500;
 }
 
 .live_main_title p {
@@ -29,12 +31,12 @@
 }
 
 .live_main_title .live_bell {
-  color: #FF4500;
+  color: #ff4500;
   font-size: 20px;
 }
 
 .live_main_title .live_nav {
-  color: #FF4500;
+  color: #ff4500;
   font-size: 20px;
 }
 
@@ -48,25 +50,25 @@
 
 .kenh_chat {
   border-radius: 10px;
-  background: #FC8B00;
+  background: #fc8b00;
   padding: 1px;
 }
 .kenh_chat p {
-  color: #FFF;
-text-align: center;
+  color: #fff;
+  text-align: center;
 
-font-size: 31.235px;
-font-style: normal;
-line-height: normal;
+  font-size: 31.235px;
+  font-style: normal;
+  line-height: normal;
 }
 .aelive_text {
-  font-size: 1.7vw !important
+  font-size: 1.7vw !important;
 }
 
 .button_betting {
   border: 0;
   color: white;
-  background: linear-gradient(to right, #FF6700, rgb(255 141 0));
+  background: linear-gradient(to right, #ff6700, rgb(255 141 0));
   border-radius: 3px;
   margin-bottom: 7px;
   padding-top: 7px;
@@ -77,35 +79,34 @@ line-height: normal;
   font-size: 0.6vw;
 }
 .button_betting:hover {
-  background: linear-gradient(to right, rgb(255 141 0), #FF6700);
+  background: linear-gradient(to right, rgb(255 141 0), #ff6700);
 }
 
 @media (max-width: 992px) {
   .main_video_live {
     display: block !important;
   }
-  .main_live_padding{
-    padding: 0!important;
-    margin: 0!important;
+  .main_live_padding {
+    padding: 0 !important;
+    margin: 0 !important;
   }
   .main_live_padding img {
     height: 25px;
   }
-  .live_main{
-    padding: 0!important;
+  .live_main {
+    padding: 0 !important;
   }
-  .main_live{
+  .main_live {
     width: 100% !important;
   }
   .video_match_live {
-    width: 100% ;
+    width: 100%;
   }
   .live_video {
     padding: 0;
   }
   .iframe_video {
     width: 100%;
-
   }
   .live_match {
     display: block !important;
@@ -115,27 +116,33 @@ line-height: normal;
   }
   .live_bet_main {
     width: 100% !important;
-    margin-top:20px;
+    margin-top: 20px;
   }
   .live_bet_main p {
     font-size: 2vw !important;
   }
   .live_bet_main button {
     font-size: 2vw !important ;
-   
   }
- .button_betting{
-  font-size: 1.2vw;
- }
+  .button_betting {
+    font-size: 1.2vw;
+  }
 }
 
 @media (max-width: 768px) {
-  .live_video {
-    margin-bottom: 100px;
+  .main_live_padding {
+    /* height: 100vh; */
   }
+  
+  /* .live_video {
+    margin-bottom: 100px;
+  } */
 
   .aelive_text {
-    font-size: 3vw !important
+    font-size: 3vw !important;
   }
 
+  .iframe_video {
+    height: 500px;
+  }
 }

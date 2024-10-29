@@ -109,11 +109,12 @@ const PartnerLivePc = (dataSlide) => {
                 className="pb-5"
               >
                 {data.map((match) => (
+                  console.log(match),
                   <SwiperSlide key={match.matchId}>
                     <div className="match-card text-center ">
                       <div className="match_league_Pc">
                         {visibleLeague && (
-                          <div className="league_text">Laliga</div>
+                            <div className="league_text">{match.league_title}</div>
                         )}
                         {isLive === true && (
                           <div className="match_live_symbol">

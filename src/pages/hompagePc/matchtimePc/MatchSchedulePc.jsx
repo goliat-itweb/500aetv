@@ -50,7 +50,7 @@ const MatchSchedulePc = ({ data }) => {
           <div className="match_schedule_Pc d-flex align-items-center justify-content-around">
             <div className="match_league_Pc">
               {visibleLeague && (
-                <div className='league_text'>Laliga</div>
+                <div className='league_text'>{match.description}</div>
               )}
               {isLive === true && (
                 <div className="match_live_symbol">
@@ -97,7 +97,7 @@ const MatchSchedulePc = ({ data }) => {
                 XEM NGAY
                 <i className="fa-regular fa-circle-play ms-1"></i>
               </button>
-              <div className="blv-button">BLV: Khô Bò</div>
+                <button>{match.name}</button>
             </div>
           </div>
         </Link>

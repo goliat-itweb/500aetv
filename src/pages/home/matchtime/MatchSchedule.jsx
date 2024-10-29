@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import arrow from "../../../assets/image/arrow.webp";
 import dot from "../../../assets/image/dot.webp";
 import trandauhot from "../../../assets/image/trandauhot.webp";
+import liveSymbol from "../../../assets/image/living.webp";
 
 const MatchSchedule = ({ data }) => {
   const [visibleMatches, setVisibleMatches] = useState(2);
@@ -71,13 +72,15 @@ const MatchSchedule = ({ data }) => {
             style={{ textDecoration: "none", color: "white" }}
             key={index}
           >
-            <div className="match_schedule " key={index}>
-              <div className="d-flex justify-content-between px-1">
-                <div>
+            <div
+              className="match_schedule"
+              key={index}
+            >
+              <div className="ms-first-row">
+                <div className="ms-description">
                   <p>{match.description}</p>
-                  <p>{match.name}</p>
                 </div>
-                <div>
+                {/* <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="19"
@@ -93,9 +96,13 @@ const MatchSchedule = ({ data }) => {
                   <p style={{ color: "#FFA600" }}>
                     {Math.floor(Math.random() * (10000 - 8000 + 1)) + 8000}
                   </p>
+                </div> */}
+                <div className="living-group">
+                  <img src={liveSymbol} alt="" />
+                  <span>LIVE</span>
                 </div>
               </div>
-              <div className="match_name ">
+              <div className="match_name">
                 <div className="match_team_one ">
                   <div className="text-center">
                     <div>
@@ -126,17 +133,20 @@ const MatchSchedule = ({ data }) => {
                 </div>
               </div>
               <div className="match_time">
-                <div className="match_time_schedule">
+                {/* <div className="match_time_schedule">
                   <div className="d-flex align-items-center justify-content-center">
                     <img src={dot} alt="" width="" />
                     <h6 className="m-0 mx-1">
                       {match.time} - {match.date.substring(5)}
                     </h6>
                   </div>
-                </div>
+                </div> */}
                 <button onClick={() => handleViewNow(match._id)}>
                   XEM NGAY
                   <i className="fa-regular fa-circle-play ms-1"></i>
+                </button>
+                <button onClick={() => handleViewNow(match._id)}>
+                  BLV: {match.name}
                 </button>
               </div>
             </div>

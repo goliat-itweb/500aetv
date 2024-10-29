@@ -4,7 +4,9 @@ import mainlogo from "../../../assets/image/mainlogo.webp";
 import personblv from "../../../assets/image/image.webp";
 import "./Infomatch.css";
 import infoMatch from "../../../assets/image/title-game.jpg";
-export default function Infomatch() {
+
+export default function Infomatch({ dataLive }) {
+  console.log("dataLive: ", dataLive);
   return (
     <div className="d-flex infomatch-container mt-3">
       <div className="infomatch_one">
@@ -12,14 +14,17 @@ export default function Infomatch() {
           <img src={personblv} alt="" className="infomatch_title_image" />
         </div>
         <div className="infomatch-content-wrapper">
+          <div>
+            <span>{dataLive.description}</span>
+          </div>
           <div className="infomatch_content">
-            <span>VIE D1: Nam Dinh FC</span>
-            <span className="tiso">0 - 10</span>
-            <span>Song Lam Nghe An</span>
+            <span>{dataLive.homeTeam}</span>
+            <span className="tiso">0 - 0</span>
+            <span>{dataLive.awayTeam}</span>
           </div>
           <div className="blv-info">
-            <div className='blv-name'>BLV: LÂM XUNG</div>
-            <div className='watching'>
+            <div className="blv-name">{dataLive.name}</div>
+            <div className="watching">
               <svg
                 width="28"
                 height="28"
@@ -35,7 +40,7 @@ export default function Infomatch() {
               20k
             </div>
             <div className="follow-viewer">
-              <div className="follow-icon">
+              <div className="follow-icon" style={{ display: 'flex' }}>
                 <svg
                   width="28"
                   height="28"
@@ -56,9 +61,9 @@ export default function Infomatch() {
                     fill="white"
                   />
                 </svg>
-                <div className='ms-1'>Follow</div>
+                <div className="ms-1">Follow</div>
               </div>
-              <div className="viewer">
+              <div className="viewer" style={{ display: 'flex' }}>
                 <svg
                   width="28"
                   height="28"
@@ -75,7 +80,7 @@ export default function Infomatch() {
                     fill="#FC8B00"
                   />
                 </svg>
-                <div className='ms-1'>9999</div>
+                <div className="ms-1">{ Math.floor(Math.random()*10000)}</div>
               </div>
             </div>
           </div>

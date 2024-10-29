@@ -76,13 +76,17 @@
 /* Auth Buttons in Sidebar */
 .auth_buttons {
     margin-top: 40px;
+    background-color:#FF6700;
+    border-radius: 50px;
+
 }
 
 .register_btn, .login_btn {
+    font-family: inter;
     display: block;
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     font-size: 3vw;
     color: white;
     border: none;
@@ -91,12 +95,13 @@
 
 .register_btn {
     background-color: #002b8b; /* Blue color */
+    border-radius: 50px 50px 5px 50px;
 }
 
 .login_btn {
-    background-color: #FF6700; /* Orange color */
+    background-color: #FF6700; 
+    border-radius: 50px;
 }
-
 /* Sidebar overlay to dim the background */
 .sidebar_overlay {
     position: fixed;

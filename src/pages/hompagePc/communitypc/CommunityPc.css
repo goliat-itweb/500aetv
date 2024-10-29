@@ -176,16 +176,16 @@
   box-shadow: 0 0.21vw 0.42vw rgb(196, 186, 186);
 }
 
+.community_two_Pc .community_box_three_Pc:hover {
+  box-shadow: 0 0.21vw 0.42vw rgb(196, 186, 186);
+}
+
+.community_two_Pc .community_box_four_Pc:hover {
+  box-shadow: 0 0.21vw 0.42vw rgb(196, 186, 186);
+}
+
 .community_color_Pc {
   transition: transform 0.2s ease;
-}
-
-.community_one_Pc .community_box_one_Pc:hover .community_color_Pc {
-  transform: translateY(2.6vw);
-}
-
-.community_two_Pc .community_box_one_Pc:hover .community_color_Pc {
-  transform: translateY(2.6vw);
 }
 
 /* Responsive Design */

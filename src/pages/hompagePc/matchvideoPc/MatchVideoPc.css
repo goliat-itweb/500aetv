@@ -7,17 +7,26 @@
       position: relative;
       .MV-button {
         position: absolute;
-        right: calc(50% - 150px);
-        top: calc(50% - 50px);
+        right: calc(50% - 120px);
+        top: calc(50% - 10px);
         color: #fc8b00;
         border-radius: 15px;
-        font-size: 1.5vw;
+        font-size: 1vw;
         font-weight: 500;
         padding: 10px 20px;
         border: 2px solid rgb(250, 165, 62);
+        background-color: #02227c;
+        opacity: 50%;
+      }
+      .MV-button:hover {
+        background-color: rgb(250, 165, 62);
+        color: #02227c;
+        border: 2px solid #02227c;
+        transition: 0.5s ease-in-out;
+        transform: scale(1.1);
+        opacity: 100%;
       }
     }
-    
   }
 }
 .MV-header-content {
@@ -38,12 +47,35 @@
     border-radius: 50px;
     height: 62px;
     width: 625px;
-    .MV-team {
+    .MV-team1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+
+      .MV-team-name {
+        font-size: 1vw;
+        font-weight: bold;
+        color: #02227c;
+        text-align: right;
+      }
+      .MV-team-logo {
+        display: flex;
+        align-items: center;
+        width: 50px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .MV-team2 {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       gap: 10px;
+
       .MV-team-name {
         font-size: 1vw;
         font-weight: bold;

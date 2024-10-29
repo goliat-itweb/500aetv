@@ -5,7 +5,7 @@ import './Homepage.css';
 
 const HomePage = () => {
    return (
-      <div className='homepage pb-5 '>
+      <div className='homepage pb-3 '>
          <div className=''>
             <div >
                <Match />

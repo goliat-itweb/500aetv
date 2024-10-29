@@ -7,7 +7,7 @@ const VideoLivePc = ({ data }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const m3u8Url = typeof data === 'string' ? data : data[1]?.cdnlink;
-
+    console.log("ádfasdf: ",m3u8Url);
     const handleUserInteraction = () => {
         if (videoRef.current && !isPlaying) {
             videoRef.current.muted = false;

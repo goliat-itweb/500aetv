@@ -2,7 +2,7 @@
   margin-top: 28px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap : 20px;
+  row-gap: 20px;
 }
 
 .match_schedule_Pc {
@@ -30,6 +30,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  color: #97abcc;
   .match_live_symbol {
     display: flex;
     flex-direction: row;
@@ -41,13 +42,16 @@
     margin-top: 5px;
     margin-bottom: 10px;
     height: 20px;
-  
+    color: white;
     img {
       width: 30%;
     }
   }
   .league_text {
-    font-size: .8vw;
+    font-size: 0.8vw;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -100,7 +104,8 @@
   gap: 2px;
   min-width: 50px;
   font-weight: 700;
-  font-size: 0.6vw;}
+  font-size: 0.6vw;
+}
 .match_team_one_Pc,
 .match_team_two_Pc {
   display: flex;
@@ -140,7 +145,7 @@
   justify-content: space-between;
   margin-top: 0.6vw;
   width: 100%;
-  .blv-button,
+ 
   button {
     display: flex;
     align-items: center;
@@ -155,11 +160,13 @@
     padding-left: 0.4vw; /* 20px to vw */
     padding-right: 0.4vw; /* 20px to vw */
     font-weight: 500;
+
   }
 }
 
 .match_time_Pc_button button:hover {
   background: linear-gradient(to right, rgb(255, 168, 61), #ff6700);
+
 }
 
 .match_see_more_Pc {

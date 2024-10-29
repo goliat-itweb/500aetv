@@ -1,15 +1,32 @@
-
+.banner_cuocngay {
+  position: relative;
+  height: 453px;
+  background-image: url("../../../assets/image/background-banner.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .thamgiacuoc {
   position: absolute;
-  top: 244%;
-  left: 58%;
-  width: 20%;
-  z-index: 1000;
+  top: 10%;
+  left: 60%;
+  width: 25%;
 }
+
 .thoadamme {
   position: absolute;
-  top: 253%;
-  left: 54%;
-  width: 30%;
-  z-index: 1000;
+  top: 35%;
+  left: 55%;
+  width: 35%;
+  animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(5%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
 }

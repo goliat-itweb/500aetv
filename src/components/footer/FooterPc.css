@@ -42,9 +42,13 @@
   color: #ccc;
 }
 
-.brand-logo img {
-  width: 407px;
-  height: 126px;
+.brand-logo {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 60px;
+  img {
+    width: 60%;
+  }
 }
 
 .brand-logo p {
@@ -83,22 +87,28 @@
     flex-direction: column;
     text-align: start;
   }
-  .brand-logo img {
-    width: 90%;
+  .footer {
+    padding: 10px 0;
+  }
+  .brand-logo {
+    padding: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .partners {
+    margin: 0 10px;
   }
   .partners-logos p {
     font-size: 3vw;
   }
-  .partners,
-  .brand-logo,
-  .payment-methods {
-    /* margin-bottom: 20px; */
-  }
 
-  .payment-icons img {
-    /* margin: 5px; */
-  }
-  .footer-links a {
-    font-size: 2.5vw;
+  .footer-links {
+    font-family: inter;
+    display: block;
+    padding-bottom: 10px;
+    p {
+      font-size: 2.5vw;
+    }
   }
 }

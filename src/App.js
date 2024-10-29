@@ -69,7 +69,8 @@ function App() {
               />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
-            <FooterPc></FooterPc>
+            {window.location.pathname.startsWith("/rooms") && isMobile
+              ? null : <FooterPc></FooterPc>}
             {isMobile ? <Toolbar /> : <></>}
           </div>
         </div>

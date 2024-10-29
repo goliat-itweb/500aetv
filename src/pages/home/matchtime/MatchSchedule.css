@@ -5,7 +5,7 @@
     padding: 0px 5px;
 }
 .match_schedule {
-    border-radius: 5.051px;
+    border-radius: 5px;
     border: 0.505px solid #00D0FF;
     padding: 0px 0px ;
     background-image: url('../../../assets/image/backgroundmatchcard.webp');
@@ -14,21 +14,45 @@
     background-color: #0000ff42;
     transition: all 0.3s;
     overflow:hidden;
-   
+    display: flex;
+    flex-direction: column;
+    .ms-description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .ms-first-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3px;
+        .living-group {
+            background-color: red;
+            padding: 2px;
+            border-radius: 2px;
+            font-size: 2vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            img {
+                margin-right: 1px;
+                width: 10px;
+            }
+        }
+    }
+
 }
 .match_schedule:hover {
     cursor: pointer;
     box-shadow: 0 4px 8px rgb(0, 0, 0); 
 }
 
-
 .match_name{
     display: flex;
     justify-content: space-between;
-    padding: 21px 0px;
     align-items: center;
     background-color : #00103F;
-   
 }
 .match_team_one ,.match_team_two {
     display: flex;
@@ -36,10 +60,12 @@
     align-items: center;
     color: #97ABCC;
 }
-.match_team_one img ,.match_team_two img {
-    margin-left: 10px;
-    /* width: 5vw; */
+
+.match_team_one {
+    display: flex;
+    justify-content: flex-end;
 }
+
 .match_team_one p ,.match_team_two p {
     margin: 0;
     font-size: 1.8vw;
@@ -53,6 +79,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 5px;
+    padding: 0px 3px;
 }
 .match_time_schedule {
 
@@ -73,7 +100,7 @@
     background: linear-gradient(90deg, #FC7600 0%, #FFA600 100%);
 
     border-radius: 3px;
-    margin-bottom: 7px;
+    margin-bottom: 3px;
     padding: 5px 5px 5px 5px;
     font-weight: 500;
     font-size: 1.5vw;
@@ -111,6 +138,10 @@
     }
     .match_team_one ,.match_team_two{
         display:block ;
+    }
+    .match_team_two {
+        display: flex;
+        justify-content: flex-start;
     }
    
     .match_team_one img ,.match_team_two img {
