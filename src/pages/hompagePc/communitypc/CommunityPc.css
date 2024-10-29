@@ -1,0 +1,205 @@
+/* Main container for left section */
+.left-section-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 4.5vw;
+  /* padding: 20px; */
+  padding-left: 10px;
+  overflow: visible;
+  border-radius: 22.797px;
+  border: 2.5px solid #fc8b00;
+  background: white;
+}
+.bginnesta {
+  position: relative;
+}
+
+.comu-right {
+  padding-right: 80px;
+}
+
+.comunityPc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1500px;
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+}
+.imagelogo_innesta {
+  /* position: absolute; */
+  top: 267px;
+  left: 168px;
+}
+/* Info box containing text and logo */
+.info-box {
+  border-radius: 10px;
+  color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+  width: 60%;
+  padding: 24px;
+}
+
+/* Logo styling */
+.logo-image {
+  width: 178px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+/* Text block inside the box */
+.text-block p {
+  font-family: inter;
+  font-size: 0.74vw;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.2;
+  word-spacing: 0px;
+  color: #02007c;
+}
+
+/* Image container for the person */
+.image-container {
+  position: absolute;
+  right: -40px;
+  /* Move the image to the right */
+  bottom: 0;
+  /* Align the bottom part of the image inside the container */
+  z-index: 2;
+  overflow: visible;
+}
+
+/* Image styling for Innesta */
+.popping-image {
+  max-height: 30vw;
+  width: auto;
+  position: relative;
+  top: 0px;
+  /* Move the image upwards to make the head pop out */
+  z-index: 3;
+}
+
+/* Text in the right section */
+
+.main_text_community_Pc {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  background: url(../../../assets/image/decor-title.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 40%;
+  span {
+    color: #fc7600;
+    /* font-family: SVN-Gilroy; */
+    font-size: 2.24vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+.main_text_community_Pc h1 {
+  color: #fff;
+  /* font-family: SVN-Gilroy; */
+  font-size: 2.24vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Community boxes */
+.community_one_Pc {
+  margin-right: 0.78vw;
+}
+
+.community_one_Pc .community_box_one_Pc {
+  margin-bottom: 0.52vw;
+  border-radius: 15.939px;
+  overflow: hidden;
+  height: 393px;
+  width: 169px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.community_one_Pc .community_box_two_Pc {
+  border-radius: 15.939px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.community_two_Pc .community_box_three_Pc {
+  border-radius: 15.939px;
+  overflow: hidden;
+  margin-bottom: 0.52vw;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.community_two_Pc .community_box_four_Pc {
+  border-radius: 15.939px;
+  overflow: hidden;
+  height: 393px;
+  width: 169px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Hover effect */
+.community_one_Pc .community_box_one_Pc:hover {
+  box-shadow: 0 0.21vw 0.42vw rgb(196, 186, 186);
+}
+
+.community_one_Pc .community_box_two_Pc:hover {
+  box-shadow: 0 0.21vw 0.42vw rgb(196, 186, 186);
+}
+
+.community_color_Pc {
+  transition: transform 0.2s ease;
+}
+
+.community_one_Pc .community_box_one_Pc:hover .community_color_Pc {
+  transform: translateY(2.6vw);
+}
+
+.community_two_Pc .community_box_one_Pc:hover .community_color_Pc {
+  transform: translateY(2.6vw);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .left-section-container {
+    height: 30vw;
+  }
+
+  .popping-image {
+    max-height: 40vw;
+    top: -10px;
+  }
+
+  .text-block p {
+    font-size: 0.8vw;
+  }
+}

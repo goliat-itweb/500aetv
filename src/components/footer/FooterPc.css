@@ -1,0 +1,104 @@
+.footer {
+  background-image: url(../../assets/image/footerimagebackground.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.partners,
+.brand-logo,
+.payment-methods {
+  flex: 1;
+  margin: 10px;
+}
+
+.partners-logos h4,
+.partners-logos h4,
+.payment-icons h4 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f90;
+}
+
+.partners-logos img,
+.payment-icons img {
+  width: 100%;
+}
+
+.partners-logos p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.brand-logo img {
+  width: 407px;
+  height: 126px;
+}
+
+.brand-logo p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.payment-icons img {
+  width: 55%;
+  margin-right: 10px;
+}
+
+.gamble-aware {
+  margin-top: 10px;
+  width: 120px;
+}
+
+.footer-links {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: start;
+  }
+  .brand-logo img {
+    width: 90%;
+  }
+  .partners-logos p {
+    font-size: 3vw;
+  }
+  .partners,
+  .brand-logo,
+  .payment-methods {
+    /* margin-bottom: 20px; */
+  }
+
+  .payment-icons img {
+    /* margin: 5px; */
+  }
+  .footer-links a {
+    font-size: 2.5vw;
+  }
+}

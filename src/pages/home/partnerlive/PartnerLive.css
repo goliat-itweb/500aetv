@@ -1,0 +1,120 @@
+.parent_partner {
+    text-align: center;
+}
+
+.master_partner {
+    position: relative;
+    border-top: 1px solid rgb(255 141 0);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.master_partner::before,
+.master_partner::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    width: 1px;
+    height: 5%;
+    background-color: #FF6700;
+}
+
+.master_partner::before {
+    left: 0;
+}
+
+.master_partner::after {
+    right: 0;
+}
+
+.main_partner {
+    background-image: url(../../../assets/image/backgroundmatchcard.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0000ff42;
+    padding: 30px 0;
+    box-sizing: border-box;
+    margin: 2px 0;
+    border-radius: 6.566px;
+    border: 0.505px solid #00D0FF;
+}
+
+.match_partner {
+    /* Match card hover effect */
+    transition: all 0.5s;
+}
+
+.match_partner:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgb(0, 0, 0); 
+}
+
+.match_team_partner {
+    background-color: #00103F;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    display: flex;
+}
+
+.match_team_partner p {
+    margin: 0;
+    font-size: 1.9vw;
+}
+
+.location_partner {
+    margin-top: 10px;
+    background-color: #2C2B3B;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.location_partner p {
+    margin: 0;
+}
+
+.location_partner_group button {
+    font-size: 6px;
+    border: 0;
+    background-color: rgb(255, 38, 0);
+    color: white;
+    border-radius: 2px;
+    display: block;
+}
+
+.location_partner_group p {
+    font-size: 10px;
+}
+
+.location_partner_date {
+    text-align: end;
+}
+
+.location_partner_date p:first-of-type {
+    color: #FF6700;
+    font-size: 9px;
+}
+
+.location_partner_date img {
+    /* display: block; */
+}
+
+.match_see_more {
+    margin-top: 20px;
+}
+
+.match_see_more a {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+.match_see_more a:hover {
+    text-decoration: underline;
+}

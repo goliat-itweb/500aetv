@@ -1,0 +1,27 @@
+.soikeo_matchtime {
+    background-color: #071436;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+.soikeo_matchtime:hover {
+    color: rgb(255 141 0);
+    cursor: pointer;
+}
+
+.name_of_match {
+    margin-left: 2vw;
+}
+
+
+@media (max-width: 768px) {
+    .soikeo_matchtime {
+        overflow: scroll;
+    }
+}
+@media (max-width: 470px) {
+.signature {
+    display: none !important;
+}
+}

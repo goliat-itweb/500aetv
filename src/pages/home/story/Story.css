@@ -1,0 +1,75 @@
+
+.story_main img{
+    width: 32vw;
+}
+.story_main .story_main_text {
+    color: #97ABCC;
+    font-size: 2vw;
+ }
+ .story_main h1{
+font-size: 5vw;
+margin-top: 5px;
+ }
+
+ .story_main h3 {
+    font-weight: 400;
+    font-size: 4vw;
+ }
+.story_main button {
+     color: white;
+     background: linear-gradient(to right, rgba(0, 111, 185, 0.74), rgb(80, 191, 255));
+     border: 0;
+     font-size: 2vw;
+     font-weight: 450;
+     transition: background 1s;
+     padding-top: 5px;
+     margin-top: 10px;
+ }
+
+ .story_main button:hover {
+     background: linear-gradient(to right, rgb(80, 191, 255), rgba(0, 111, 185, 0.74));
+     cursor: pointer;
+ }
+/* 
+ @media (max-width: 768px) {
+    .story_main h1 {
+        font-size: 40px;
+    }
+    .story_main p {
+       font-size: 20px;
+    }
+ }
+
+ 
+ @media (max-width: 500px) {
+    .story_main img {
+        width: 40%;
+    }
+    .story_main h1 {
+        font-size: 34px;
+    }
+    .story_main p {
+       font-size: 15px;
+    }
+    .story_main h3 {
+        font-size: 22px;
+    }
+    .story_main button {
+        font-size: 0.6rem;
+    }
+ }
+
+ @media (max-width: 382px) {
+    .story_main h1 {
+        font-size: 25px;
+    }
+    .story_main h3 {
+        font-size: 20px;
+    }
+    .story_main p {
+       font-size: 15px;
+    }
+    .story_main button {
+        font-size: 0.6rem;
+    }
+ } */

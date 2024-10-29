@@ -1,0 +1,44 @@
+.nhaccaiuytin .text_nhacai {
+    color: #FFF;
+    /* font-family: SVN-Gilroy; */
+    font-size: 1.25vw;
+    /* font-style: normal; */
+    /* font-weight: 500; */
+    /* line-height: normal; */
+    /* text-transform: capitalize; */
+    margin: 0;
+}
+
+.topnhacaiuytin {
+    padding-top: 35px;
+}
+
+.watch-button2 {
+    border: 0;
+    color: white;
+    border-radius: 4.9px;
+    background: linear-gradient(90deg, #FC7600 0%, #FFA600 100%);
+    border-radius: 0.16vw;
+    /* 3px to vw */
+    /* 7px to vw */
+    padding-top: 0.37vw;
+    /* 7px to vw */
+    font-size: 0.75vw;
+    /* 50% ≈ 8px = 0.42vw */
+    padding-left: 1.2vw;
+    /* 20px to vw */
+    padding-right: 1.2vw;
+    /* 20px to vw */
+    padding-bottom: 0.37vw;
+    /* 7px to vw */
+    font-weight: 500;
+}
+
+.listnhacai {
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    align-items:center;
+    justify-content: center;
+    padding-bottom: 55px;
+}

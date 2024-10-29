@@ -1,0 +1,188 @@
+.matchSchedule_Pc {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap : 20px;
+}
+
+.match_schedule_Pc {
+  background-image: url("../../../assets/image/backgroundmatchcard.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 11.833px;
+  background-color: #050e7ab7;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #019fd3;
+  box-shadow: 0vw 0vw 0.4vw #00d0ff;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 272px;
+  height: 136px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.5vw;
+}
+.match_league_Pc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .match_live_symbol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 20px;
+  
+    img {
+      width: 30%;
+    }
+  }
+  .league_text {
+    font-size: .8vw;
+  }
+}
+
+.match-vs {
+  padding-top: 2px;
+  font-size: 0.6vw;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    rgba(0, 51, 180, 0.8),
+    rgba(73, 177, 247, 0.8)
+  );
+  border-radius: 4px;
+  padding: 1px 20px;
+}
+.match_schedule_Pc:hover {
+  cursor: pointer;
+  box-shadow: 0 0.21vw 0.42vw rgb(0, 0, 0); /* 0 4px 8px to vw */
+}
+
+/* Optional gradient effect was commented out in the original code */
+
+.match_name_Pc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 16, 63);
+  border-radius: 10px; /* 30px to vw */
+  padding: 0.26vw 0.6vw 0.26vw 0.6vw; /* 5px 50px 5px 50px to vw */
+  margin-left: 0.5vw; /* 20px to vw */
+  margin-right: 0.5vw; /* 20px to vw */
+  width: 100%;
+  gap: 20px;
+}
+
+.match-middle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.match-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ff6700, rgb(255 141 0));
+  border-radius: 5px;
+  padding: 2px;
+  gap: 2px;
+  min-width: 50px;
+  font-weight: 700;
+  font-size: 0.6vw;}
+.match_team_one_Pc,
+.match_team_two_Pc {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #97abcc;
+}
+
+.match_team_one_Pc img,
+.match_team_two_Pc img {
+  margin-left: 0.52vw; /* 10px to vw */
+}
+
+.match_team_one_Pc p,
+.match_team_two_Pc p {
+  margin: 0;
+}
+
+.match_time_Pc {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 0.26vw; /* 5px to vw */
+}
+
+.match_time_schedule_Pc p {
+  margin: 0;
+  color: #97abcc;
+}
+
+.match_time_Pc_button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.6vw;
+  width: 100%;
+  .blv-button,
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color: white;
+    background: linear-gradient(to right, #ff6700, rgb(255, 168, 61));
+    border-radius: 0.16vw; /* 3px to vw */
+    padding-top: 0.2vw; /* 7px to vw */
+    padding-bottom: 0.2vw; /* 7px to vw */
+    font-size: 0.45vw;
+    padding-left: 0.4vw; /* 20px to vw */
+    padding-right: 0.4vw; /* 20px to vw */
+    font-weight: 500;
+  }
+}
+
+.match_time_Pc_button button:hover {
+  background: linear-gradient(to right, rgb(255, 168, 61), #ff6700);
+}
+
+.match_see_more_Pc {
+  margin-top: 0.52vw; /* 10px to vw */
+  text-align: center;
+}
+
+.match_see_more_Pc a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.match_see_more_Pc i {
+  color: #ff6700;
+}
+
+.MSPC-viewmore {
+  img {
+    transition: transform 0.5s ease-in-out;
+  }
+  img:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+  }
+}

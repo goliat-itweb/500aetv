@@ -1,0 +1,19 @@
+.banner_Pc img {
+    width: 30%; /* width remains in percentage */
+}
+
+.banner_button_PC button {
+    color: white;
+    background: linear-gradient(to right, rgba(0, 111, 185, 0.74), rgb(80, 191, 255));
+    border: 0;
+    font-size: 1.21vw; /* converted from 100% (assuming the base font size is 16px, 100% = 16px, so 16px ≈ 0.83vw) */
+    font-weight: 450;
+    transition: background 1s;
+    padding-top: 0.26vw; /* converted from 5px */
+    width: 30%; /* width remains in percentage */
+}
+
+.banner_button_PC button:hover {
+    background: linear-gradient(to right, rgb(80, 191, 255), rgba(0, 111, 185, 0.74));
+    cursor: pointer;
+}

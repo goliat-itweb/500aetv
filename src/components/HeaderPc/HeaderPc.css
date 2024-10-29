@@ -1,0 +1,97 @@
+
+.header_Pc {
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 3px 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    width: 147px;
+    height: 36px;
+}
+
+.nav_bar_Pc {
+    margin-top: 10px;
+}
+
+.nav_link_Pc {
+    text-decoration: none;
+    color: #02227C;
+    transition: all 0.5s;
+    margin: 0 1vw;
+    font-weight: 600;
+    /* text-shadow: 1px 1px 1px #02227C; */
+    font-size: 1.1vw;
+}
+
+.nav_link_Pc:hover {
+    color: rgb(255 141 0); 
+    cursor: pointer;
+}
+
+.nav_link_Pc.active {
+    color: #FC8B00; 
+}
+
+.dropdownheader {
+    position: relative;
+    display: inline-block;
+}
+
+/* Initially hide the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white; /* Dropdown background color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect for dropdown */
+    z-index: 1;
+    min-width: 160px;
+    border-radius: 5px;
+    padding: 10px 0; /* Space inside the dropdown */
+}
+
+/* Each dropdown item */
+.dropdown-item {
+    color: #090057;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9vw; /* Smaller font size for dropdown items */
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background-color: #f2f2f2; /* Hover effect for dropdown items */
+    color: rgb(255 141 0); /* Change text color on hover */
+}
+
+/* Show dropdown on hover */
+.dropdownheader:hover .dropdown-menu {
+    display: block;
+}
+
+/* Styling for the dropdown toggle (TIN TỨC) */
+.dropdown-toggle {
+    cursor: pointer;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* Adjust dropdown for responsiveness */
+@media (max-width: 768px) {
+    .nav_link_Pc {
+        font-size: 3vw; /* Larger font size on smaller screens */
+    }
+    .dropdown-menu {
+        min-width: 200px; /* Adjust width for mobile */
+    }
+    .dropdown-item {
+        font-size: 3vw; /* Larger dropdown item font size */
+    }
+}

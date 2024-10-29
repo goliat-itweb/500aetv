@@ -1,0 +1,104 @@
+.main_carousel {
+  padding-top: 20px;
+  border-radius: 10px;
+}
+.carousel-container {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.carousel-item {
+  padding: 10px;
+}
+
+.match-card {
+  background-image: url("../../../assets/image/backgroundmatchcard.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 11.833px;
+  background-color: #071289b7;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #019fd3;
+  box-shadow: 0vw 0vw 0.4vw #00d0ff;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  height: 9vw;
+}
+
+.PLPC-match-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 2px 20px;
+  margin: 5px 0px;
+  border-radius: 9.12px;
+  gap: 10px;
+  background-color: rgba(3, 19, 59, 0.8);
+  height: 81px;
+  font-size: 0.55vw;
+
+  .PLPC-match-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    .PLPC-time {
+      background: linear-gradient(to right, #ff6700, rgb(255, 168, 61));
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+    .PLPC-vs-text {
+      padding-top: 2px;
+      font-size: 0.6vw;
+      font-weight: 700;
+      background: linear-gradient(
+        to right,
+        rgba(0, 51, 180, 0.8),
+        rgba(73, 177, 247, 0.8)
+      );
+      border-radius: 4px;
+  padding: 1px 20px;
+    }
+  }
+}
+
+.date,
+.time {
+  margin: 5px 0;
+  font-size: 0.7vw;
+}
+
+.watch-button {
+  border: 0;
+  color: white;
+  background: linear-gradient(to right, #ff6700, rgb(255, 168, 61));
+  border-radius: 0.16vw; /* 3px to vw */
+  /* 7px to vw */
+  padding-top: 0.4vw; /* 7px to vw */
+  font-size: 0.5vw; /* 50% ≈ 8px = 0.42vw */
+  padding-left: 0.4vw; /* 20px to vw */
+  padding-right: 0.4vw; /* 20px to vw */
+  padding-bottom: 0.4vw; /* 7px to vw */
+  font-weight: 500;
+}
+
+.watch-button:hover {
+  background: linear-gradient(to right, rgb(255, 168, 61), #ff6700);
+}
+
+.livePC2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+}

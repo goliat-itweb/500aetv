@@ -1,0 +1,132 @@
+.matchSchedule_relate{
+ width: 100%;
+}
+.match_schedule_relate {
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    background-color: #232E44;
+    transition: all 0.3s;
+    overflow:hidden;
+   
+}
+.match_schedule_relate:hover {
+    cursor: pointer;
+    /* scale: 1.1; */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); 
+}
+
+.match_name_relate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color : #0B193A;
+    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+}
+.match_team_one_relate ,.match_team_two_relate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #97ABCC;
+}
+.match_team_one_relate img ,.match_team_two_relate img {
+    margin-left: 10px;
+    /* width: 3vw; */
+}
+.match_team_one_relate p ,.match_team_two_relate p {
+    margin: 0;
+    font-size: 0.8vw;
+    
+}
+.vs_relate {
+    font-size: 1.4vw;
+}
+.match_time_relate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.match_time_schedule_relate {
+
+}
+.match_time_schedule_relate h6 {
+ font-size: 1.1vw;
+ margin-left: 4px;
+}
+.match_time_schedule_relate p{
+    margin: 0;
+    color: #97ABCC;
+    font-size: 0.8vw;
+}
+.match_time_relate button {
+    border: 0;
+    color: white;
+    background: linear-gradient(to right, #FF6700, rgb(255 141 0));
+    border-radius: 3px;
+    margin-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 7px;
+    font-weight: 500;
+    font-size: 0.6vw;
+}
+
+.match_time_relate button:hover {
+    background: linear-gradient( to right,rgb(255 141 0),#FF6700);;
+
+}
+
+.match_see_more_relate {
+    margin-top: 10px;
+    text-align: center;
+}
+.match_see_more_relate a {
+    color : white;
+    text-decoration: none;
+    display: block;
+    font-size: 0.6vw;
+}
+/* .match_see_more_relate img {
+   width: 3vw;
+} */
+.match_see_more_relate i {
+    color: #FF6700;
+}
+
+@media (max-width: 992px) {
+    .matchSchedule_relate{
+        width: 100%;
+       }
+       .match_team_one_relate p ,.match_team_two_relate p {
+        margin: 0;
+        font-size: 2.5vw;
+        
+    }
+    .match_time_schedule_relate p{
+        font-size: 2.5vw;
+    }
+    .match_time_relate button {
+        font-size : 1.5vw;
+    }
+    .match_see_more_relate a {
+        font-size:1.5vw
+    }
+}
+@media (max-width: 420px) {
+    .match_name_relate{
+        text-align: center;
+    }
+    .match_team_one_relate ,.match_team_two_relate{
+        display:block ;
+    }
+   
+    .match_team_one_relate img ,.match_team_two_relate img {
+        margin: 0px;
+    }
+}

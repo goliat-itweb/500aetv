@@ -1,0 +1,119 @@
+.matchSchedule{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 5px; /* Space between the items */
+    padding: 0px 5px;
+}
+.match_schedule {
+    border-radius: 5.051px;
+    border: 0.505px solid #00D0FF;
+    padding: 0px 0px ;
+    background-image: url('../../../assets/image/backgroundmatchcard.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0000ff42;
+    transition: all 0.3s;
+    overflow:hidden;
+   
+}
+.match_schedule:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgb(0, 0, 0); 
+}
+
+
+.match_name{
+    display: flex;
+    justify-content: space-between;
+    padding: 21px 0px;
+    align-items: center;
+    background-color : #00103F;
+   
+}
+.match_team_one ,.match_team_two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #97ABCC;
+}
+.match_team_one img ,.match_team_two img {
+    margin-left: 10px;
+    /* width: 5vw; */
+}
+.match_team_one p ,.match_team_two p {
+    margin: 0;
+    font-size: 1.8vw;
+    
+}
+.vs {
+    font-size: 6vw;
+}
+.match_time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.match_time_schedule {
+
+}
+.match_time_schedule h6 {
+ font-size: 2.3vw;
+ margin-left: 4px;
+}
+.match_schedule p{
+    margin: 0;
+    color: #97ABCC;
+    font-size: 2vw;
+}
+.match_time button {
+    border: 0;
+    color: white;
+    /* background: linear-gradient(to right, #FF6700, rgb(255 141 0)); */
+    background: linear-gradient(90deg, #FC7600 0%, #FFA600 100%);
+
+    border-radius: 3px;
+    margin-bottom: 7px;
+    padding: 5px 5px 5px 5px;
+    font-weight: 500;
+    font-size: 1.5vw;
+}
+
+.match_time button:hover {
+    background: linear-gradient( to right,rgb(255 141 0),#FF6700);;
+
+}
+
+.match_see_more {
+    margin-top: 10px;
+    text-align: center;
+}
+.match_see_more a {
+    color : white;
+    text-decoration: none;
+    display: block;
+    font-size: 1.8vw;
+}
+.match_see_more img {
+   width: 3vw;
+}
+.match_see_more i {
+    color: rgb(255 141 0);
+}
+
+
+@media (max-width: 420px) {
+    .MS_title {
+        padding-top: 20px;
+    }
+    .match_name{
+        text-align: center;
+    }
+    .match_team_one ,.match_team_two{
+        display:block ;
+    }
+   
+    .match_team_one img ,.match_team_two img {
+        margin: 0px;
+    }
+}

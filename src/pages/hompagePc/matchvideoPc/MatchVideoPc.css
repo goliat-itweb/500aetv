@@ -1,0 +1,99 @@
+.MV_Pc {
+  .MV-rightSide {
+    .MV-header-title {
+      display: flex;
+    }
+    .MV-video-group {
+      position: relative;
+      .MV-button {
+        position: absolute;
+        right: calc(50% - 150px);
+        top: calc(50% - 50px);
+        color: #fc8b00;
+        border-radius: 15px;
+        font-size: 1.5vw;
+        font-weight: 500;
+        padding: 10px 20px;
+        border: 2px solid rgb(250, 165, 62);
+      }
+    }
+    
+  }
+}
+.MV-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+
+  .MV-header-team {
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50px;
+    height: 62px;
+    width: 625px;
+    .MV-team {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .MV-team-name {
+        font-size: 1vw;
+        font-weight: bold;
+        color: #02227c;
+      }
+      .MV-team-logo {
+        display: flex;
+        align-items: center;
+        width: 50px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .MV-header-BLV {
+    display: flex;
+    flex: 1;
+    background-color: darkorange;
+    border-radius: 50px;
+    height: 62px;
+    gap: 10px;
+
+    .MV-blv-avatar {
+      width: 2vw;
+      padding: 5px;
+      img {
+        height: 100%;
+      }
+    }
+
+    .MV-blv-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 15px;
+      font-weight: 500;
+    }
+
+    .MV-blv-items {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 5px;
+      background-color: white;
+      color: black;
+      padding: 0 5px;
+      border-radius: 50px;
+      font-size: 0.55vw;
+    }
+  }
+}

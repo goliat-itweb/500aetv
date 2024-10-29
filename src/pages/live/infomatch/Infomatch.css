@@ -1,0 +1,75 @@
+.infomatch-container {
+  border-radius: 15px;
+  background-image: url(../../../assets/image/title-game.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+  height: 6vw;
+}
+.infomatch_one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.infomatch_content {
+  span {
+    font-size: 1.5vw;
+    font-weight: 700;
+  }
+}
+.tiso {
+  color: blue;
+  padding: 0 10px;
+}
+
+.infomatch-content-wrapper {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blv-info {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5vw;
+
+  .blv-name {
+    color: black;
+    font-weight: 700;
+  }
+  .follow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    .follow-icon {
+      margin-right: 5px;
+    }
+  }
+  .watching {
+    display: flex;
+    align-items: center;
+    font-size: 1.3vw;
+    padding: 0 20px;
+  }
+}
+
+.follow-viewer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 8px;
+  gap: 10px;
+
+  .follow-icon,
+  .viewer {
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+  }
+  color: black;
+  border-radius: 25px;
+  background-color: white;
+}

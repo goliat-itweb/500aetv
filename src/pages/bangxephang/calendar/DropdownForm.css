@@ -1,0 +1,71 @@
+.form-container {
+  position: relative;
+}
+
+.dropdown-label {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropdown {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  /* border: 1px solid white; */
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #ffff;
+}
+.dropdown option {
+  background-color: white; /* Dropdown options background */
+  color: #000;
+}
+
+.dropdown::-ms-expand {
+  display: none;
+}
+
+.dropdown:hover {
+  border-color: white; /* Slightly lighter border on hover */
+}
+
+.dropdown:focus-visible {
+  outline: none;
+  /* Slight glow effect */
+  border-color: white; /* Maintain the same border color on focus */
+}
+
+
+.arrow-down {
+  position: absolute;
+  top: 50%;
+  right: 12px; /* Position the arrow inside the dropdown */
+  width: 0;
+  height: 0;
+  margin-top: -3px; /* Center the arrow vertically */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #000;
+  pointer-events: none;
+}
+
+@media (max-width: 550px) {
+  .dropdown {
+    font-size: 2vw;
+  }
+}

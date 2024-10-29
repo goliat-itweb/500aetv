@@ -1,0 +1,66 @@
+.video {}
+
+.video_livestream {}
+
+.video_btn {
+    border: 0;
+    background-color: rgb(255 141 0);
+    color: white;
+    padding: 3px 15px 3px 15px;
+    border-radius: 5px;
+}
+/* 
+.video_stream {
+    position: relative;
+    padding-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgb(255 141 0) ;
+    border-radius: 5px
+}
+
+.video_stream::before,
+.video_stream::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    width: 1px; 
+    height: 5%; 
+    background-color: #FF6700; 
+}
+
+.video_stream::before {
+    left: 0; 
+    
+}
+
+.video_stream::after {
+    right: 0; 
+   
+} */
+
+.video_text {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.video_text .img_football_match {
+    margin-right: 1vw;
+    width: 5vw;
+}
+.video_text p {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 100;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 2vw;
+}
+
+.video_text i {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.video_match_live video {
+    border-radius: 7px;
+}

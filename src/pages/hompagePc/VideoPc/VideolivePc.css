@@ -1,0 +1,14 @@
+.custom-video_Pc {
+  margin-top: 30px;
+  /* width: 90%; */
+  /* height: 25vw; */
+  object-fit: cover;
+}
+@media (max-width: 1450px) {
+  .custom-video_Pc {
+    margin-top: 80px;
+    height: 100%;
+    width: 100%;
+  }
+   
+}

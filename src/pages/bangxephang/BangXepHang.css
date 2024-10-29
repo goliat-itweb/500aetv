@@ -1,0 +1,117 @@
+.bangxephang {
+ background-color: #020818;   
+}
+.bangxephang_main {
+    background-size: cover;
+    overflow: hidden;
+    background: linear-gradient(to right, #FF6700, rgb(255 141 0));
+   
+}
+.bxh_bottom {
+    margin-top: 15px;
+}
+.bxh_bottom i {
+    font-size: 40px;
+    color: black;
+}
+
+.select_championship{
+    margin-left: 10px;
+    width: 13%;
+}
+.priemier_leauge {
+    background-color : transparent;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+   
+    
+}
+.priemier_leauge option {
+   color: #000;
+}
+.bxh_bottom button{
+    border: 0;
+    font-weight: bold;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+}
+
+.follower {
+    margin-top: 30px;
+}
+.follower span {
+    color: black;
+    font-weight: bold;
+}
+
+.btn_rank {
+    margin-top: 10px;
+    background-color: #071436;
+    padding: 20px 0px 20px 0px;
+    border-radius :10px;
+}
+.btn_rank button:first-of-type {
+    padding: 5px 20px 5px 20px;
+}
+.btn_rank button {
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(255 141 0);
+    color: white;
+    background-color: #071436;
+    transition: all 1s;
+}
+
+.btn_rank button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(255, 102, 0) , rgb(255 141 0));
+}
+.btn_rank button.active {
+    background: linear-gradient(to right, rgb(255, 102, 0) , rgb(255 141 0));
+}
+
+@media (max-width: 550px) {
+    .main_season_select h6 {
+        font-size: 2.5vw;
+    }
+    .main_season_select p {
+        font-size: 2vw;
+    }
+    
+    .bell_bxh img{
+        width: 10vw;
+    }
+    .img_championshop_logo img {
+        width: 15vw !important;
+    }
+    .btn_rank{
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .bangxephang_main {
+        padding: 15px 0 15px 0 !important;
+    }
+  
+}
+
+@media (max-width: 350px) {
+    /* .main_season_select {
+        display: block !important;
+    } */
+    .bangxephang_main {
+        padding: 10px !important;
+    }
+    .dropdown {  
+        margin-left: 30px;
+    }
+    .bell_bxh {
+        display: none !important;
+    }
+    .select_championship{
+        width: 15%;
+    }
+}

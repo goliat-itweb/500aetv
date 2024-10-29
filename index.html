@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        ONLINE OFFICE - VĂN PHÒNG ĐIỆN TỬ
+    </title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="keywords" content="online office, văn phòng điện tử, vpdt, vpđt, văn phòng, văn phòng ảo" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="logincss/coreloginform/css/style.css" type="text/css" media="all" />
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <link href="//fonts.googleapis.com/css?family=Mukta+Mahee:200,300,400,500,600,700,800" rel="stylesheet" />
+    <!-- //fonts -->
+    <!-- Font-Awesome-File -->
+    <link rel="stylesheet" href="logincss/coreloginform/css/font-awesome.css" type="text/css" media="all" />
+    <link rel="icon" type="image/png" href="Images/ico.png" />
+</head>
+
+<body onload="javascript:body_bg();document.forms[0].txtUserName.focus();">
+    <h1 class="title-agile text-center"><br />
+    </h1>
+    <!---728x90--->
+    <div class="content-w3ls">
+        <div class="agileits-grid">
+
+            <!---728x90--->
+            <div class="content-bottom">
+                <form role="form" method="post" class="loginForm">
+                    <div class="field_w3ls">
+                        <div class="field-group">
+
+
+                            <input name="txtUserName" type="text" id="txtUserName" size="20" maxlength="30" class="input" placeholder="Tên đăng nhập" data-msg="Tên đăng nhập bắt buộc nhập" required="" />
+                        </div>
+                        <div class="field-group">
+
+                            <input name="txtPassword" type="password" id="txtPassword" size="20" maxlength="64" class="form-control" placeholder="Mật khẩu" required="" />
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                    <div class="wthree-field">
+                        <input id="saveForm" name="saveForm" type="submit" value="Đăng nhập" />
+
+                    </div>
+                    <ul class="list-login">
+                        <li class="switch-agileits">
+                            <label class="switch">
+                                <input type="checkbox" id="remember" name="remember" />
+                                <span class="slider round"></span>
+                                Ghi nhớ
+                            </label>
+                        </li>
+                        <li>
+
+                        </li>
+                        <li class="clearfix"></li>
+                    </ul>
+                </form>
+            </div>
+            <div id="sendmessage"></div>
+            <div id="errormessage"></div>
+
+            <!-- //content bottom -->
+        </div>
+    </div>
+    <!---728x90--->
+    <div class="copyright text-center">
+        <p>Copyright &copy; <a href="http://onlineoffice.vn" target="_blank">ONLINE OFFICE</a> 2015 - 2024.</p>
+        <p>Sản phẩm hợp pháp bởi Cục Bản Quyền Tác Giả - Bộ VHTTDL chứng nhận.</p>
+    </div>
+    <!--//copyright-->
+    <script src="logincss/coreloginform/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="VKeyBoard/vk_loader.js?vk_layout=US US&vk_skin=textual"></script>
+    <!-- script for show password -->
+    <script>
+        $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+
+            var input = $($(this).attr("toggle"));
+
+            if ($("#txtPassword").attr("type") == "password") {
+                $("#txtPassword").attr("type", "text");
+            } else {
+                $("#txtPassword").attr("type", "password");
+            }
+        });
+    </script>
+    <!-- /script for show password -->
+    <script>
+        jQuery(document).ready(function($) {
+            "use strict";
+
+            //Contact
+            $('form.loginForm').submit(function() {
+                var f = $(this).find('.field-group'),
+                    ferror = false;
+
+
+
+                f.children('input').each(function() { // run all inputs
+
+                    var i = $(this); // current input
+                    var rule = i.attr('data-rule');
+                    if (rule !== undefined) {
+                        var ierror = false; // error flag for current input
+                        var pos = rule.indexOf(':', 0);
+                        if (pos >= 0) {
+                            var exp = rule.substr(pos + 1, rule.length);
+                            rule = rule.substr(0, pos);
+                        } else {
+                            rule = rule.substr(pos + 1, rule.length);
+                        }
+
+                        switch (rule) {
+                            case 'required':
+                                if (i.val() === '') {
+                                    ferror = ierror = true;
+                                }
+                                break;
+
+                            case 'minlen':
+                                if (i.val().length < parseInt(exp)) {
+                                    ferror = ierror = true;
+                                }
+                                break;
+
+                            case 'email':
+                                if (!emailExp.test(i.val())) {
+                                    ferror = ierror = true;
+                                }
+                                break;
+
+                            case 'checked':
+                                if (!i.attr('checked')) {
+                                    ferror = ierror = true;
+                                }
+                                break;
+
+                            case 'regexp':
+                                exp = new RegExp(exp);
+                                if (!exp.test(i.val())) {
+                                    ferror = ierror = true;
+                                }
+                                break;
+                        }
+                        i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+                    }
+                });
+
+                if (ferror) return false;
+                else var str = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "Default.aspx/verify",
+                    data: JSON.stringify({
+                        'ten_dang_nhap': $("#txtUserName").val(),
+                        'mat_khau': $("#txtPassword").val(),
+                        'ghi_nho': $("#remember").is(":checked")
+                    }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(respond) {
+                        var msg = respond.d;
+                        if (msg == 'OK') {
+                            $("#sendmessage").addClass("show");
+                            $('#sendmessage').html("Tài khoản hợp lệ, đang chuyển đến hệ thống ...");
+                            $("#errormessage").removeClass("show");
+                            document.location.href = 'index.aspx';
+                        } else {
+                            $("#sendmessage").removeClass("show");
+                            $("#errormessage").addClass("show");
+                            $('#errormessage').html(msg);
+                        }
+
+                    }
+                });
+                return false;
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    function body_bg() {
+        var d = new Date();
+        var n = d.getMonth() + 1;
+        var bg_image = 'thang' + n;
+        document.body.style.background = 'url(Images/BG_Thang/' + bg_image + '.jpg) no-repeat center center fixed';
+        document.body.style.backgroundSize = 'cover';
+    }
+</script>

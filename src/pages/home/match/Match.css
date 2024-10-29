@@ -1,0 +1,25 @@
+.match_main {
+    border-radius: 7px;
+    opacity: 1;
+}
+
+.match_text p,.match_text span {
+    margin:0;
+}
+
+@media (max-width: 555px) {
+    .match_text{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .match_text p {
+        width: 100%;
+        font-size: 6.5vw;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+
+}
+

@@ -1,0 +1,141 @@
+
+.main_live_padding {
+  .livestream-notification{
+    background-color: #0043ff;
+    border-radius: 50px;
+    height: 29px;
+    margin: 10px 0;
+    img {
+      padding-left: 5px;
+    }
+  }
+}
+
+.main_video_live {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.live_main_title .live_toggle {
+  font-size: 25px;
+  color: #FF4500;
+
+}
+
+.live_main_title p {
+  font-size: 30px;
+  color: rgb(255 141 0);
+}
+
+.live_main_title .live_bell {
+  color: #FF4500;
+  font-size: 20px;
+}
+
+.live_main_title .live_nav {
+  color: #FF4500;
+  font-size: 20px;
+}
+
+.video_match_live {
+  width: 75%;
+}
+
+.iframe_video {
+  width: 25%;
+}
+
+.kenh_chat {
+  border-radius: 10px;
+  background: #FC8B00;
+  padding: 1px;
+}
+.kenh_chat p {
+  color: #FFF;
+text-align: center;
+
+font-size: 31.235px;
+font-style: normal;
+line-height: normal;
+}
+.aelive_text {
+  font-size: 1.7vw !important
+}
+
+.button_betting {
+  border: 0;
+  color: white;
+  background: linear-gradient(to right, #FF6700, rgb(255 141 0));
+  border-radius: 3px;
+  margin-bottom: 7px;
+  padding-top: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 7px;
+  font-weight: 500;
+  font-size: 0.6vw;
+}
+.button_betting:hover {
+  background: linear-gradient(to right, rgb(255 141 0), #FF6700);
+}
+
+@media (max-width: 992px) {
+  .main_video_live {
+    display: block !important;
+  }
+  .main_live_padding{
+    padding: 0!important;
+    margin: 0!important;
+  }
+  .main_live_padding img {
+    height: 25px;
+  }
+  .live_main{
+    padding: 0!important;
+  }
+  .main_live{
+    width: 100% !important;
+  }
+  .video_match_live {
+    width: 100% ;
+  }
+  .live_video {
+    padding: 0;
+  }
+  .iframe_video {
+    width: 100%;
+
+  }
+  .live_match {
+    display: block !important;
+  }
+  .live_match_main {
+    width: 100% !important;
+  }
+  .live_bet_main {
+    width: 100% !important;
+    margin-top:20px;
+  }
+  .live_bet_main p {
+    font-size: 2vw !important;
+  }
+  .live_bet_main button {
+    font-size: 2vw !important ;
+   
+  }
+ .button_betting{
+  font-size: 1.2vw;
+ }
+}
+
+@media (max-width: 768px) {
+  .live_video {
+    margin-bottom: 100px;
+  }
+
+  .aelive_text {
+    font-size: 3vw !important
+  }
+
+}

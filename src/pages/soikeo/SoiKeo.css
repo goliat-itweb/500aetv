@@ -1,0 +1,24 @@
+.soikeo_main {
+    background-color: #020818;
+    padding-bottom: 100px;
+}
+.soikeo_day{
+    background: linear-gradient(to right , #FF6700 , rgb(255 141 0));
+  
+}
+.soikeo_day p{
+    font-size: 11px;
+}
+.soikeo_ft{
+    background-color: #071436;
+}
+.soikeo_ft p {
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .soikeo_day {
+        overflow: scroll;
+    }
+}

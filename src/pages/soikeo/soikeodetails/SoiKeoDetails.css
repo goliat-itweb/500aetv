@@ -1,0 +1,108 @@
+.soikeo_chitiet{
+    background-color: #020818;
+}
+.soikeo_delails{
+    background-size: cover;
+    /* background-image: url(../../../assets/image/backgroundsoikeo.webp); */
+}
+.soikeo_delails_two button {
+    background: linear-gradient(to right, rgb(80, 127, 255) ,rgb(0, 26, 255) );
+    border-radius: 3px;
+    border: 0;
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+
+.soikeo_delails_two button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(0, 26, 255),rgb(80, 156, 255)  );
+    border-radius: 3px;
+}
+
+.soikeo_details_find {
+    font-size: 17px;
+    border-bottom: 1px solid #FF6700;
+}
+
+.circle_main h4 {
+    margin-left: 20px ;
+}
+.circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FF4500, #FF8C00);
+    position: relative;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 0px;
+    background-color: #020818;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle-number {
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.circle-label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.frame_soikeo {
+    background-color: #0B193A;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    margin: 0 10px 0 10px;
+}
+.frame_soikeo_one {
+    padding: 0px 15px 0px 15px;
+}
+
+.soikeo_details_scores {
+    border: 1px solid #FF4500;
+    padding: 10px 10px 0px 10px;
+    border-radius: 20px;
+
+}
+
+
+
+@media (max-width: 321px) {
+    .soikeo_delails_two h5 {
+         font-size: 16px;
+    }   
+    .soikeo_delails_two p {
+        font-size: 10px ;
+    }
+    .soikeo_details_vip {
+        display: block !important;
+    }
+    .soikeo_details_scores {
+        justify-content: space-around;
+    }
+  
+}

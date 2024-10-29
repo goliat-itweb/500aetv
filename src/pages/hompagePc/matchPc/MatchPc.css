@@ -1,0 +1,122 @@
+.match_main_Pc {
+    background: rgba(16, 24, 37, 0.70);
+    border-radius: 32.267px;
+    opacity: 1;
+    padding-top: 1vw; 
+    padding-bottom: 1.56vw; 
+}
+
+
+.MV_text_Pc span {
+    color: rgb(255 141 0);
+}
+
+.MV_text_Pc p {
+    font-size: 2vw; 
+    font-weight: 700;
+    padding-top: 0.52vw; 
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+.MV_text_Pc p:nth-of-type(2)  {
+    color: white;
+}
+
+.MV_text_Pc h8 {
+    margin-top: 0.26vw; 
+    display: inline-block;
+    margin-bottom: 0.52vw;
+    font-size: 0.9vw; 
+    font-weight: 600;
+}
+
+.btn_leauge_Pc {
+    display: inline;
+    border: 0;
+    background-color: #020b81;
+    color: white;
+    text-align: center;
+    border-radius: 13.081px;
+    padding:0.75vw 1.9vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    margin-right: 4px;
+    transition: all 1s;
+}
+.btn_leauge_Pc1 {
+    display: inline;
+    border: 0;
+    background-color: #020b81;
+    color: white;
+    text-align: center;
+    border-radius: 13.081px;
+    padding:0.75vw 2vw;
+    font-size: 1.1vw;
+    margin-right: 4px;
+    font-weight: 500;
+    transition: all 1s;
+}
+.btn_leauge_Pc2 {
+    display: inline;
+    border: 0;
+    background-color: #020b81;
+    color: white;
+    text-align: center;
+    border-radius: 13.081px;
+    padding:0.75vw 2.4vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    margin-right: 4px;
+    transition: all 1s;
+}
+.btn_leauge_Pc3 {
+    display: inline;
+    border: 0;
+    background-color: #020b81;
+    color: white;
+    text-align: center;
+    border-radius: 13.081px;
+    padding:0.75vw 0.95vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    margin-right: 4px;
+    transition: all 1s;
+}
+.btn_leauge_Pc4 {
+    display: inline;
+    border: 0;
+    background-color: #020b81;
+    color: white;
+    text-align: center;
+    border-radius: 13.081px;
+    padding:0.75vw 1.8vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+    margin-right: 4px;
+    transition: all 1s;
+}
+
+ .btn_leauge_Pc:hover {
+    background-color: rgb(255 141 0);
+}
+
+.btn_leauge_Pc.active {
+    background-color: rgb(255 141 0);
+}
+
+@media (max-width: 1155px) {
+    /* .btn_leauge_Pc {  padding:0.85vw 1.2vw;}
+    .btn_leauge_Pc1 {  padding:0.85vw 1.2vw;}
+    .btn_leauge_Pc2 {  padding:0.85vw 1.2vw;}
+    .btn_leauge_Pc3 {  padding:0.85vw 1.2vw;}
+    .btn_leauge_Pc4 {  padding:0.85vw 1.5vw;}
+      */
+}
+
+@media (max-width: 957px) {
+    .btn_leauge_Pc{
+       /* padding:0.7vw 2.5vw 0.7vw 2.5vw; */
+    }
+        
+   }
