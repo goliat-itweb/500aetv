@@ -88,6 +88,7 @@ const PartnerLivePc2 = (dataSlide) => {
           </text>
         </svg>
         <div className="responsive-carousel" style={{ width: "1400px" }}>
+          
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}

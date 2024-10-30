@@ -5,10 +5,10 @@ const MatchPc = ({ data }) => {
 
     if (data) return (
         <div className='d-flex justify-content-center align-items-center' style={{ margin:' 33px 0 20px 0' }}>
-            <div className='match_main_Pc' style={{ width: '1500px', padding:'23px 40px'}}>
-                <div className='' >
+            <div className='match_main_Pc'>
+             
                     <MatchVideoPc data={data}></MatchVideoPc>
-                </div>
+              
             </div>
         </div>
 

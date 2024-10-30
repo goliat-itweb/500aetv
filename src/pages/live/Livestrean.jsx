@@ -89,14 +89,14 @@ const LiveStream = () => {
             <img src={speaker} alt="" />
             <div className="ln-text">
               <marquee>
-                🔥<span style={{ color: "#ba0000" }}>HOT !</span>🔥 Siêu bão KM
+                🔥<span style={{ color: "#ff0e0e" }}>HOT !</span>🔥 Siêu bão KM
                 từ <span style={{ color: "#fc8b00" }}>500AE</span> TV : Đăng ký
                 tài khoản tặng <span style={{ color: "#fc8b00" }}>57K</span>
                 🎁 Thể Thao nạp đầu tặng{" "}
                 <span style={{ color: "#fc8b00" }}>8.888K</span> 👉 CƯỢC CÀNG
                 NHIỀU NHẬN THƯỞNG CÀNG CAO .☎️ Liên hệ ngay:{" "}
-                <span style={{ color: "#03aa00" }}>@TIP50AE</span> ☎️{" "}
-                <span style={{ color: "#03aa00" }}>0785.66.9999</span> để nhận
+                <span style={{ color: "#29e58a" }}>@TIP50AE</span> ☎️{" "}
+                <span style={{ color: "#29e58a" }}>0785.66.9999</span> để nhận
                 những phần quà hấp dẫn!🎁🎁🎁
               </marquee>
             </div>

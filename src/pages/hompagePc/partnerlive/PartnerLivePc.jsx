@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useStore from "../../store/useStore";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,24 +11,37 @@ import liveSymbol from "../../../assets/image/living.webp";
 
 const PartnerLivePc = (dataSlide) => {
   const [data, setData] = useState(null);
+  const [extraData, setExtraData] = useState(null);
   const [error, setError] = useState(null);
-  const [isLive, setIsLive] = useState(true);
   const [visibleLeague, setVisibleLeague] = useState(true);
   const setVideoList = useStore((state) => state.setVideoList);
 
   const truncateText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + "...";
-    }
-    return text;
+    return text.length > maxLength
+      ? text.substring(0, maxLength) + "..."
+      : text;
+  };
+
+  const statusMapping = {
+    1: "Chưa bắt đầu",
+    2: "Hiệp một",
+    3: "Giữa hiệp",
+    4: "Hiệp hai",
+    5: "Hiệp phụ",
+    6: "Hiệp phụ (không sử dụng)",
+    7: "Loạt đá luân lưu",
+    8: "Kết thúc",
+    9: "Trì hoãn",
+    10: "Tạm dừng",
+    11: "Cắt đôi",
+    12: "Hủy",
+    13: "Chờ xác định",
   };
 
   const fetchData = async () => {
     const url = `${process.env.REACT_APP_API_URL}/api/rooms/partnerlive`;
     try {
-      const response = await fetch(url, {
-        method: "GET",
-      });
+      const response = await fetch(url, { method: "GET" });
       if (!response.ok) {
         throw new Error(
           "CHƯA CÓ TRẬN ĐẤU NÀO CỦA KÊNH NHÀ ĐÀI" + response.statusText
@@ -43,20 +56,29 @@ const PartnerLivePc = (dataSlide) => {
     }
   };
 
-  const getDayOfWeek = (timestamp) => {
-    const date = new Date(timestamp * 1000);
-    return date.toLocaleDateString("en-US", { weekday: "long" });
+  const fetchExtraData = async () => {
+    try {
+      const response = await fetch("https://spapi.zetcdn.site/livedata.json");
+      if (!response.ok) {
+        throw new Error("Error fetching extra data: " + response.statusText);
+      }
+      const extraData = await response.json();
+      setExtraData(extraData);
+    } catch (error) {
+      console.error("Problem with extra data fetch:", error);
+    }
   };
 
   useEffect(() => {
     fetchData();
+    fetchExtraData();
   }, []);
 
   if (error) {
     return <div className="text-center">{error}</div>;
   }
 
-  if (data) {
+  if (data && extraData) {
     return (
       <div className="d-flex justify-content-center align-items-center">
         <div className="main_carousel" style={{ width: "1500px" }}>
@@ -90,7 +112,6 @@ const PartnerLivePc = (dataSlide) => {
                 TRẬN ĐẤU KHÁC
               </text>
             </svg>
-
             <div className="responsive-carousel" style={{ width: "1400px" }}>
               <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
@@ -99,83 +120,98 @@ const PartnerLivePc = (dataSlide) => {
                 autoplay={{ delay: 5000 }}
                 pagination={{ clickable: true }}
                 breakpoints={{
-                  1000: {
-                    slidesPerView: 4,
-                  },
-                  0: {
-                    slidesPerView: 3,
-                  },
+                  1000: { slidesPerView: 4 },
+                  0: { slidesPerView: 3 },
                 }}
                 className="pb-5"
               >
-                {data.map((match) => (
-                  console.log(match),
-                  <SwiperSlide key={match.matchId}>
-                    <div className="match-card text-center ">
-                      <div className="match_league_Pc">
-                        {visibleLeague && (
-                            <div className="league_text">{match.league_title}</div>
-                        )}
-                        {isLive === true && (
+                {data.map((match) => {
+                  const matchingExtraData = extraData.find(
+                    (item) => item.matchId === match.matchId
+                  );
+                  const score = matchingExtraData
+                    ? matchingExtraData.score.replace(",", "-")
+                    : "1-1";
+
+                  // Get translated status based on code
+                  const statusText = matchingExtraData
+                    ? statusMapping[matchingExtraData.status] ||
+                      "Không xác định"
+                    : "Không xác định";
+
+                  return (
+                    <SwiperSlide key={match.matchId}>
+                      <div className="match-card text-center">
+                        <div className="match_league_Pc">
+                          {visibleLeague && (
+                            <div className="league_text">
+                              {match.league_title}
+                            </div>
+                          )}
                           <div className="match_live_symbol">
                             <img src={liveSymbol} alt="live symbol" />
-                            <div className="ms-1">LIVE</div>
+                            <div className="ms-1">
+                              {" "}
+                              <p style={{ fontSize: "0.5vw", margin: 0 }}>
+                                {statusText}
+                              </p>{" "}
+                            </div>
                           </div>
-                        )}
-                      </div>
-                      <div className="PLPC-match-container teams d-flex justify-content-center align-items-center text-center px-3">
-                        <div className="text-center ">
-                          <img
-                            src={match.localteam_logo}
-                            className="imglogo_partnerPc"
-                            width="50px"
-                            height="50px"
-                            alt=""
-                          />
-                          <p className="m-0">
-                            {truncateText(match.localteam_title, 10)}
-                          </p>
                         </div>
-                        <div className="PLPC-match-info">
-                          <p className="PLPC-time m-0">{match.startTime}</p>
-                          <p className="PLPC-vs-text m-0">1 - 1</p>
+                        <div className="PLPC-match-container teams d-flex justify-content-center align-items-center text-center px-3">
+                          <div className="text-center">
+                            <img
+                              src={match.localteam_logo}
+                              className="imglogo_partnerPc"
+                              width="50px"
+                              height="50px"
+                              alt=""
+                            />
+                            <p className="m-0">
+                              {truncateText(match.localteam_title, 10)}
+                            </p>
+                          </div>
+                          <div className="PLPC-match-info">
+                            <p className="PLPC-time m-0">{match.startTime}</p>
+                            <p className="PLPC-vs-text m-0">{score}</p>
+                          </div>
+                          <div className="text-center">
+                            <img
+                              src={match.visitorteam_logo}
+                              className="imglogo_partnerPc"
+                              width="50px"
+                              height="50px"
+                              alt=""
+                            />
+                            <p className="m-0">
+                              {truncateText(match.visitorteam_title, 10)}
+                            </p>
+                          </div>
                         </div>
-                        <div className="text-center">
-                          <img
-                            src={match.visitorteam_logo}
-                            className="imglogo_partnerPc"
-                            width="50px"
-                            height="50px"
-                            alt=""
-                          />
-                          <p className="m-0">
-                            {truncateText(match.visitorteam_title, 10)}
-                          </p>
-                        </div>
-                      </div>
 
-                      <div className="d-flex justify-content-between align-items-center mt-3">
-                        <div>
-                          <a
-                            className="watch-button text-light text-decoration-none"
-                            href={`/videopartner/${match.matchId}`}
-                          >
-                            Xem ngay{" "}
-                            <i className="fa-regular fa-circle-play ms-1"></i>
-                          </a>
-                        </div>
-                        <div>
-                          <a
-                            className="watch-button text-light text-decoration-none"
-                            href={`/videopartner/${match.matchId}`}
-                          >
-                            BLV: KHÔ BÒ
-                          </a>
+                        <div className="d-flex justify-content-between align-items-center mt-3">
+                          <div>
+                            <a
+                              className="watch-button text-light text-decoration-none"
+                              href={`/videopartner/${match.matchId}`}
+                            >
+                              Xem ngay{" "}
+                              <i className="fa-regular fa-circle-play ms-1"></i>
+                            </a>
+                          </div>
+                          <div>
+                            <a
+                              className="watch-button text-light text-decoration-none"
+                              href={`/videopartner/${match.matchId}`}
+                            >
+                              BLV: NHÀ ĐÀI
+                            </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
+                    </SwiperSlide>
+                  );
+                })}
               </Swiper>
             </div>
           </div>

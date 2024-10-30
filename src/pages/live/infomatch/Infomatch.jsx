@@ -7,6 +7,7 @@ import infoMatch from "../../../assets/image/title-game.jpg";
 
 export default function Infomatch({ dataLive }) {
   console.log("dataLive: ", dataLive);
+
   return (
     <div className="d-flex infomatch-container mt-3">
       <div className="infomatch_one">
@@ -14,20 +15,20 @@ export default function Infomatch({ dataLive }) {
           <img src={personblv} alt="" className="infomatch_title_image" />
         </div>
         <div className="infomatch-content-wrapper">
-          <div>
-            <span>{dataLive.description}</span>
+          <div className="infomatch_description">
+            {/* <span>{dataLive.description}</span> */}
           </div>
           <div className="infomatch_content">
-            <span>{dataLive.homeTeam}</span>
+            {/* <span>{dataLive.homeTeam}</span> */}
             <span className="tiso">0 - 0</span>
-            <span>{dataLive.awayTeam}</span>
+            {/* <span>{dataLive.awayTeam}</span> */}
           </div>
           <div className="blv-info">
-            <div className="blv-name">{dataLive.name}</div>
+            {/* <div className="blv-name">{dataLive.name}</div> */}
             <div className="watching">
               <svg
-                width="28"
-                height="28"
+                width="20"
+                height="20"
                 viewBox="0 0 21 28"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,8 +43,8 @@ export default function Infomatch({ dataLive }) {
             <div className="follow-viewer">
               <div className="follow-icon" style={{ display: 'flex' }}>
                 <svg
-                  width="28"
-                  height="28"
+                  width="20"
+                  height="20"
                   viewBox="0 0 23 23"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +66,8 @@ export default function Infomatch({ dataLive }) {
               </div>
               <div className="viewer" style={{ display: 'flex' }}>
                 <svg
-                  width="28"
-                  height="28"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 21"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +87,7 @@ export default function Infomatch({ dataLive }) {
           </div>
         </div>
       </div>
-    </div>
+        </div>
+       
   );
 }

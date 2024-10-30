@@ -1,4 +1,14 @@
+.MV-container {
+  width: 1500px;
+}
 .MV_Pc {
+  background-color: rgba(16, 24, 37, 0.7);
+  border-radius: 30px;
+  opacity: 1;
+  padding-top: 1vw;
+  padding-bottom: 1.56vw;
+  padding: 23px 40px;
+ 
   .MV-rightSide {
     .MV-header-title {
       display: flex;
@@ -129,3 +139,20 @@
     }
   }
 }
+
+@media (max-width: 1499px) and (min-width: 769px) {
+  .MV-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .MV_Pc {
+    width: 90vw;
+  } 
+
+  .match_schedule_Pc {
+    width: 16vw !important;
+  }
+} 

@@ -37,19 +37,21 @@
     justify-content: center;
     align-items: center;
     background-color: red;
-    padding: 5px 0;
+    padding: 10px 5px;
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 10px;
     height: 20px;
     color: white;
+    white-space: nowrap;
+
     img {
-      width: 30%;
+      width: 20%;
     }
   }
   .league_text {
     font-size: 0.8vw;
-    white-space: nowrap; 
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -145,7 +147,7 @@
   justify-content: space-between;
   margin-top: 0.6vw;
   width: 100%;
- 
+
   button {
     display: flex;
     align-items: center;
@@ -160,13 +162,11 @@
     padding-left: 0.4vw; /* 20px to vw */
     padding-right: 0.4vw; /* 20px to vw */
     font-weight: 500;
-
   }
 }
 
 .match_time_Pc_button button:hover {
   background: linear-gradient(to right, rgb(255, 168, 61), #ff6700);
-
 }
 
 .match_see_more_Pc {

@@ -1,11 +1,8 @@
 .match_main_Pc {
-    background: rgba(16, 24, 37, 0.70);
-    border-radius: 32.267px;
-    opacity: 1;
-    padding-top: 1vw; 
-    padding-bottom: 1.56vw; 
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
-
 
 .MV_text_Pc span {
     color: rgb(255 141 0);

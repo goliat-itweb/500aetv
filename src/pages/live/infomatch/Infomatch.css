@@ -12,10 +12,13 @@
   justify-content: center;
   align-items: center;
 }
+.infomatch_description {
+  font-size: 1vw;
+}
 
 .infomatch_content {
   span {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     font-weight: 700;
   }
 }
@@ -33,7 +36,7 @@
 .blv-info {
   display: flex;
   flex-direction: row;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 
   .blv-name {
     color: black;
@@ -53,7 +56,7 @@
   .watching {
     display: flex;
     align-items: center;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     padding: 0 20px;
   }
 }
@@ -63,6 +66,7 @@
   flex-direction: row;
   align-items: center;
   padding: 0 8px;
+  margin: 8px;
   gap: 10px;
 
   .follow-icon,
@@ -70,7 +74,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.5vw;
+    font-size: .7vw;
   }
   color: black;
   border-radius: 25px;
