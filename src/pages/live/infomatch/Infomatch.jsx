@@ -16,15 +16,15 @@ export default function Infomatch({ dataLive }) {
         </div>
         <div className="infomatch-content-wrapper">
           <div className="infomatch_description">
-            {/* <span>{dataLive.description}</span> */}
+            <span>{dataLive.description}</span>
           </div>
           <div className="infomatch_content">
-            {/* <span>{dataLive.homeTeam}</span> */}
+            <span>{dataLive.homeTeam}</span>
             <span className="tiso">0 - 0</span>
-            {/* <span>{dataLive.awayTeam}</span> */}
+            <span>{dataLive.awayTeam}</span>
           </div>
           <div className="blv-info">
-            {/* <div className="blv-name">{dataLive.name}</div> */}
+            <div className="blv-name">{dataLive.name}</div>
             <div className="watching">
               <svg
                 width="20"

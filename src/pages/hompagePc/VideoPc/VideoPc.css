@@ -1,3 +1,10 @@
 video {
     border-radius: 10px;
 }
+
+@media (max-width: 786px) {
+    video {
+        border:none;
+        border-radius: 0;
+    }
+}

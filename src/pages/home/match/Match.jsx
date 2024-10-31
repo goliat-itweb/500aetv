@@ -7,7 +7,7 @@ const Match = () => {
             <div className='px-3'>
                 <div className='match_text text-center'>
                     <p className=''>
-                       CẬP NHẬT                      
+                       CẬP NHẬT                    
                             <span style={{ color: 'rgb(255 141 0) ' }}> TRẬN THI ĐẤU HOT</span>
                     </p>
                     {/* <span className="h8">GIẢI ĐẤU VÀ TRẬN ĐẤU SẮP TỚI</span> */}

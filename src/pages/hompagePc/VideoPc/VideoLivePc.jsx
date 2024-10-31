@@ -7,7 +7,6 @@ const VideoLivePc = ({ data }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const m3u8Url = typeof data === 'string' ? data : data[1]?.cdnlink;
-    console.log("ádfasdf: ",m3u8Url);
     const handleUserInteraction = () => {
         if (videoRef.current && !isPlaying) {
             videoRef.current.muted = false;
@@ -26,7 +25,7 @@ const VideoLivePc = ({ data }) => {
                 video.src = m3u8Url;
                 video.muted = false;
                 video.play().catch(() => {
-                   
+                    console.log("autoplay bị chặn");
                 });
             } else if (Hls.isSupported()) {
                 // If HLS is supported, use it for .m3u8 streams
@@ -65,6 +64,7 @@ const VideoLivePc = ({ data }) => {
             <video
                 ref={videoRef}
                 // controls
+                playsInline
                 autoPlay
                 muted
                 width="100%"

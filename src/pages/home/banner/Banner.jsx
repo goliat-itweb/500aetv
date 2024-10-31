@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import thamgiacuoc from "../../../assets/image/thamgiacuocngay.webp";
+import thamgiacuoc from "../../../assets/image/thamgiacuoc.png";
 import thoadamme from "../../../assets/image/thoadamme.png";
 import person from "../../../assets/image/personcuoc.webp";
 import banner from "../../../assets/image/background-banner.png";

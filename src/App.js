@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
-import HomePagePc from "./pages/hompagePc/HomePagePc"; // Import the PC version of the HomePage
+import HomePagePc from "./pages/hompagePc/HomePagePc";
 import SoikeoPage from "./pages/soikeo/SoiKeo";
 import Header from "./components/Header/Header";
 import Toolbar from "./components/Toolbar/ToolBar";
@@ -21,6 +26,43 @@ import HeaderPc from "./components/HeaderPc/HeaderPc";
 import VideoPartnerLive from "./pages/home/partnerlive/videopartner/VideoPartner";
 import "./styles/App.css";
 import FooterPc from "./components/footer/FooterPc";
+
+function MainContent({ isMobile }) {
+  const location = useLocation(); // Get the current location
+  const isLiveStreamRoute = location.pathname.startsWith("/rooms"); // Check if the current route starts with '/rooms'
+
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={isMobile ? <HomePage /> : <HomePagePc />} />
+        <Route path="/soikeo" element={<SoikeoPage />} />
+        <Route path="/soikeo/:matchId" element={<SoiKeoDetails />} />
+        <Route path="/bxh" element={<BangXepHang />} />
+        <Route path="/rooms/:roomId" element={<LiveStream />} />
+        <Route path="/profile" element={<UserDashboard />} />
+        <Route path="/profile/user" element={<User />} />
+        <Route path="/profile/user/edit" element={<EditProfile />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/news" element={<Community />} />
+        <Route path="/betting" element={<Community />} />
+        <Route path="/wheel" element={<Community />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/listroom" element={<ListRoom />} />
+        <Route path="/videopartner/:matchId" element={<VideoPartnerLive />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+      {isMobile && !isLiveStreamRoute && (
+        <>
+          <FooterPc />
+          <Toolbar />
+        </>
+      )}{" "}
+      {/* Only show Toolbar if not on a livestream route */}
+    </>
+  );
+}
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -42,36 +84,23 @@ function App() {
       <div className="main_app">
         <div className="background_image1">
           <div className="main_container">
-            {isMobile ? <Header /> : <HeaderPc />}
-            <Routes>
-              <Route
-                path="/"
-                element={isMobile ? <HomePage /> : <HomePagePc />}
-              />
-              <Route path="/soikeo" element={<SoikeoPage />} />
-              <Route path="/soikeo/:matchId" element={<SoiKeoDetails />} />
-              <Route path="/bxh" element={<BangXepHang />} />
-              <Route path="/rooms/:roomId" element={<LiveStream />} />
-              <Route path="/profile" element={<UserDashboard />} />
-              <Route path="/profile/user" element={<User />} />
-              <Route path="/profile/user/edit" element={<EditProfile />} />
-              <Route path="/community" element={<Community />} />
-              <Route path="/news" element={<Community />} />
-              <Route path="/betting" element={<Community />} />
-              <Route path="/wheel" element={<Community />} />
-              <Route path="/login" element={<LoginForm />} />
-              <Route path="/register" element={<RegisterForm />} />
-              <Route path="/admin" element={<Admin />} />
-              <Route path="/listroom" element={<ListRoom />} />
-              <Route
-                path="/videopartner/:matchId"
-                element={<VideoPartnerLive />}
-              />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-            {window.location.pathname.startsWith("/rooms") && isMobile
-              ? null : <FooterPc></FooterPc>}
-            {isMobile ? <Toolbar /> : <></>}
+            {isMobile ? (
+              <>
+                <Header />
+              </>
+            ) : (
+              <>
+                <HeaderPc />
+              </>
+            )}
+            <MainContent isMobile={isMobile} /> {/* Pass isMobile as a prop */}
+            {isMobile ? (
+              <></>
+            ) : (
+              <>
+                <FooterPc />
+              </>
+            )}
           </div>
         </div>
       </div>

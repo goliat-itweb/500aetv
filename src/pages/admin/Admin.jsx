@@ -73,7 +73,6 @@ const Admin = () => {
         e.preventDefault();
         const token = localStorage.getItem('accessToken');
 
-     
         const url = editRoomId
             ? `${process.env.REACT_APP_API_URL}/api/rooms/${editRoomId}`
             : `${process.env.REACT_APP_API_URL}/api/rooms/create`;

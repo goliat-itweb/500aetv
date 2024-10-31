@@ -22,10 +22,8 @@
     text-decoration: none;
     color: #02227C;
     transition: all 0.5s;
-    margin: 0 1vw;
-    font-weight: 600;
-    /* text-shadow: 1px 1px 1px #02227C; */
-    font-size: 1.1vw;
+    font-weight: bold;
+    font-size: 1.2vw;
 }
 
 .nav_link_Pc:hover {
@@ -35,6 +33,38 @@
 
 .nav_link_Pc.active {
     color: #FC8B00; 
+}
+
+.header_nhacaiuytin {
+    background: linear-gradient(to right, #ff6700, rgb(255, 168, 61));
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    font-size: .8vw;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0 .3vw;
+}
+
+.header_cuocngay{
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    font-size: .8vw;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0 .3vw;
+    animation: blink .5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: rgb(255, 168, 61);
+    }
+    50% {
+        /* background: linear-gradient(to right, #ff6700, rgb(255, 168, 61)); */
+        background-color: #02227C;
+    }
 }
 
 .dropdownheader {

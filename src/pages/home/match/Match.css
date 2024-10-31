@@ -7,13 +7,10 @@
     margin:0;
 }
 
-@media (max-width: 555px) {
-    .match_text{
-        padding-top: 20px;
-        padding-bottom: 10px;
-    }
+@media (max-width: 768px) {
 
     .match_text p {
+        padding-top: 7px;
         width: 100%;
         font-size: 6.5vw;
         font-weight: 600;

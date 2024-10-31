@@ -38,6 +38,10 @@ const PartnerLivePc = (dataSlide) => {
     13: "Chờ xác định",
   };
 
+  const extractTime = (dateTimeString) => {
+    return dateTimeString.split(" ")[1] || "";
+  };
+
   const fetchData = async () => {
     const url = `${process.env.REACT_APP_API_URL}/api/rooms/partnerlive`;
     try {
@@ -149,11 +153,10 @@ const PartnerLivePc = (dataSlide) => {
                             </div>
                           )}
                           <div className="match_live_symbol">
-                            <img src={liveSymbol} alt="live symbol" />
-                            <div className="ms-1">
+                            <div className="">
                               {" "}
                               <p style={{ fontSize: "0.5vw", margin: 0 }}>
-                                {statusText}
+                                {extractTime(match.startTime)}
                               </p>{" "}
                             </div>
                           </div>
@@ -172,7 +175,7 @@ const PartnerLivePc = (dataSlide) => {
                             </p>
                           </div>
                           <div className="PLPC-match-info">
-                            <p className="PLPC-time m-0">{match.startTime}</p>
+                          <p className="PLPC-time m-0">{statusText}</p>
                             <p className="PLPC-vs-text m-0">{score}</p>
                           </div>
                           <div className="text-center">

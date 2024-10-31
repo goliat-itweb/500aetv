@@ -57,8 +57,10 @@ const Header = () => {
                     )}
                     {/* Close the sidebar when a nav link is clicked */}
                     <NavLink to="/" className="nav_link" onClick={toggleMenu}>TRANG CHỦ</NavLink>
-                    <NavLink to="/soikeo" className="nav_link" onClick={toggleMenu}>TRẬN ĐẤU SẮP TỚI</NavLink>
-                    <NavLink to="/bxh" className="nav_link" onClick={toggleMenu}>BẢNG XẾP HẠNG</NavLink>
+                    <NavLink to="/soikeo" className="nav_link" onClick={toggleMenu}>LỊCH THI ĐẤU</NavLink>
+                    <NavLink to="/bxh" className="nav_link" onClick={toggleMenu}>BONGDALU</NavLink>
+                    <NavLink to="/bxh" className="nav_link" onClick={toggleMenu}>HIGHLIGHT</NavLink>
+                    <NavLink to="/bxh" className="nav_link" onClick={toggleMenu}>KHUYẾN MÃI</NavLink>
                     <NavLink to="https://500ae.name" className="nav_link" onClick={toggleMenu}>TIN TỨC</NavLink>
                 </nav>
 

@@ -67,3 +67,24 @@
 .match_video .btn_leauge1.active {
     background-color: rgb(255 141 0) ;
 }
+
+@media (max-width: 768px) {
+  .match_video {
+    position: relative;
+  }
+ 
+    .MV-button {
+      position: absolute;
+      right: calc(50% - 70px);
+      top: calc(50% - 120px);
+      color: #fc8b00;
+      border-radius: 15px;
+      font-weight: 500;
+      padding: 10px 20px;
+      border: 2px solid rgb(250, 165, 62);
+      background-color: #02227c;
+      opacity: 50%;
+      z-index: 999;
+    }
+
+}

@@ -1,6 +1,8 @@
 .video {}
 
-.video_livestream {}
+.video_livestream {
+    margin-top: 20px;
+}
 
 .video_btn {
     border: 0;
@@ -62,5 +64,12 @@
 }
 
 .video_match_live video {
-    border-radius: 7px;
+    border: 1px solid rgb(255 141 0);
+    height: 628px;
+}
+
+@media (max-width: 768px) {
+  .video_livestream  {
+    margin: 0;
+  }
 }

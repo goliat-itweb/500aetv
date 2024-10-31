@@ -1,4 +1,9 @@
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url(../font/SVN-GILROY-REGULAR.OTF);
+}
 body {
+  font-family: "SVN-Gilroy";
   box-sizing: border-box;
   margin: 0;
   padding: 0;

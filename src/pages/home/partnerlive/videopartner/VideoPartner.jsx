@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
 import footballvideo from "../../../../assets/video/football.mp4";
-import speaker from "../../../../assets/image/speaker.webp";
+import speaker from "../../../../assets/image/speaker.png";
 import Topnhacai from "../../../live/othermatch/Topnhacai";
 import Infomatch from "../../../live/infomatch/Infomatch";
 import useStore from "../../../store/useStore";
@@ -117,38 +117,100 @@ const VideoPartnerLive = () => {
     return <div className="text-center">{error}</div>;
   }
   return (
-    <div
-      className=""
-      style={{
-        backgroundColor: "rgb(13 42 123 / 49%)",
-        backgroundImage: "url(../../../../assets/image/backgroundlive.webp)",
-      }}
-    >
-      <div className="pt-2 container">
-        <img src={speaker} alt="" width="100%" />
+    <div className="live_main d-flex justify-content-center align-items-center">
+      <div className="main_live" style={{ width: "1540px" }}>
+        <div className="main_live_padding">
+          {!isMobile && (
+            <div className="livestream-notification">
+              <img src={speaker} alt="" />
+              <div className="ln-text">
+                <marquee>
+                  🔥
+                  <span style={{ color: "#ff0e0e", fontWeight: "600" }}>
+                    HOT !
+                  </span>
+                  🔥 Siêu bão KM từ{" "}
+                  <span style={{ color: "#fc8b00", fontWeight: "bolder" }}>
+                    500AE TV 
+                  </span>{" "}
+                  : Đăng ký tài khoản tặng{" "}
+                  <span style={{ color: "#fc8b00", fontWeight: "bolder" }}>
+                    57K
+                  </span>
+                  🎁 Thể Thao nạp đầu tặng{" "}
+                  <span style={{ color: "#fc8b00", fontWeight: "bolder" }}>
+                    8.888K
+                  </span>{" "}
+                  👉 CƯỢC CÀNG NHIỀU NHẬN THƯỞNG CÀNG CAO .☎️ Liên hệ ngay:{" "}
+                  <span style={{ color: "#29e58a", fontWeight: "bolder" }}>
+                    @TIP500AE
+                  </span>{" "}
+                  ☎️{" "}
+                  <span style={{ color: "#29e58a", fontWeight: "bolder" }}>
+                    0785.66.9999
+                  </span>{" "}
+                  để nhận những phần quà hấp dẫn!🎁🎁🎁
+                </marquee>
+              </div>
+            </div>
+          )}
+        </div>
 
         <div className="videopartner text-center">
           <div className="videopartner1 d-flex justify-content-between align-items-start mt-2 pb-5">
             <div className="video_match_live">
-              <video
-                ref={videoRef}
-                controls
-                width="100%"
-                height="100%"
-                onClick={handleUserInteraction}
-              >
-                Your browser does not support the video tag.
-              </video>
+                <video
+                  ref={videoRef}
+                  controls
+                  width="100%"
+                  height="100%"
+                  onClick={handleUserInteraction}
+                />
+            
             </div>
-            <div className="mx-1 iframe_video">
-              <div className="text-center kenh_chat">
-                <p>KÊNH CHAT</p>
-              </div>
-              <iframe
-                src={`${process.env.REACT_APP_API_URL}/66e2d08c51acae5963c0cdd9?token=${jwtToken}`}
-                title="Live Stream"
-                style={{ width: "100%", height: "465px" }}
-              ></iframe>
+            <div className="iframe_video">
+              {!isMobile && (
+                <div className="text-center kenh_chat">
+                  <p className="m-0">KÊNH CHAT</p>
+                </div>
+              )}
+              {isMobile ? (
+                <iframe
+                className=""
+                  // src={`${process.env.REACT_APP_API_URL}/${roomId}?token=${jwtToken}`}
+                  src="https://trxshbet.online"
+                  title="Live Stream"
+                  style={{
+                    width: "100%",
+                    height: "340px",
+                    borderRadius: "5px",
+                    allowtransparency: "yes",
+                    allow: "autoplay",
+                    frameborder: "0",
+                    marginheight: "0",
+                    marginwidth: "0",
+                    scrolling: "auto",
+                  }}
+                ></iframe>
+              ) : (
+                <iframe
+                  className=""
+                  // src={`${process.env.REACT_APP_API_URL2}/${roomId}?token=${jwtToken}`}
+                  src="https://trxshbet.online"
+                  title="Live Stream"
+                  style={{
+                    width: "100%",
+                    height: "568px",
+                    borderRadius: "5px",
+                    allowtransparency: "yes",
+                    allow: "autoplay",
+                    frameborder: "0",
+                    marginheight: "0",
+                    marginwidth: "0",
+                    scrolling: "auto",
+                  }}
+                ></iframe>
+              )}
             </div>
           </div>
         </div>

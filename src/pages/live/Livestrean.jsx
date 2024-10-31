@@ -6,8 +6,11 @@ import Infomatch from "./infomatch/Infomatch";
 import speaker from "../../assets/image/speaker.png";
 import Topnhacai from "./othermatch/Topnhacai";
 import Partnerlivepc2 from "./partnerlivepc2/Partnerlivepc2";
+import homeIcon from "../../assets/image/home.png";
+import logo from "../../assets/image/logo-header.png";
 
 const LiveStream = () => {
+  console.log(window.location.pathname);
   const { roomId } = useParams();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -15,19 +18,8 @@ const LiveStream = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
   const jwtToken = localStorage.getItem("accessToken");
   const [dataLive, setDataLive] = useState(null);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       // const response = await fetch(`${process.env.REACT_APP_API_URL}/api/rooms/list`);
-  //       const response = await fetch(`${process.env.REACT_APP_API_URL2}`);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+
+  const [elementHeight, setElementHeight] = useState('100vh');
 
   useEffect(() => {
     const fetchRoomData = async () => {
@@ -81,26 +73,45 @@ const LiveStream = () => {
     return <div>Error: {error}</div>;
   }
 
+
   return (
     <div className="live_main d-flex justify-content-center align-items-center">
       <div className="main_live" style={{ width: "1540px" }}>
         <div className="main_live_padding">
-          <div className="livestream-notification">
-            <img src={speaker} alt="" />
-            <div className="ln-text">
-              <marquee>
-                🔥<span style={{ color: "#ff0e0e" }}>HOT !</span>🔥 Siêu bão KM
-                từ <span style={{ color: "#fc8b00" }}>500AE</span> TV : Đăng ký
-                tài khoản tặng <span style={{ color: "#fc8b00" }}>57K</span>
-                🎁 Thể Thao nạp đầu tặng{" "}
-                <span style={{ color: "#fc8b00" }}>8.888K</span> 👉 CƯỢC CÀNG
-                NHIỀU NHẬN THƯỞNG CÀNG CAO .☎️ Liên hệ ngay:{" "}
-                <span style={{ color: "#29e58a" }}>@TIP50AE</span> ☎️{" "}
-                <span style={{ color: "#29e58a" }}>0785.66.9999</span> để nhận
-                những phần quà hấp dẫn!🎁🎁🎁
-              </marquee>
+          {!isMobile && (
+            <div className="livestream-notification">
+              <img src={speaker} alt="" />
+              <div className="ln-text">
+                <marquee>
+                  🔥
+                  <span style={{ color: "#ff0e0e", fontWeight: "600" }}>
+                    HOT !
+                  </span>
+                  🔥 Siêu bão KM từ{" "}
+                  <span style={{ color: "#fc8b00", fontWeight: "bolder" }}>
+                    500AE TV
+                  </span>{" "}
+                  : Đăng ký tài khoản tặng{" "}
+                  <span style={{ color: "#fc8b00", fontWeight: "bolder" }}>
+                    57K
+                  </span>
+                  🎁 Thể Thao nạp đầu tặng{" "}
+                  <span style={{ color: "#fc8b00", fontWeight: "bolder" }}>
+                    8.888K
+                  </span>{" "}
+                  👉 CƯỢC CÀNG NHIỀU NHẬN THƯỞNG CÀNG CAO .☎️ Liên hệ ngay:{" "}
+                  <span style={{ color: "#29e58a", fontWeight: "bolder" }}>
+                    @TIP500AE
+                  </span>{" "}
+                  ☎️{" "}
+                  <span style={{ color: "#29e58a", fontWeight: "bolder" }}>
+                    0785.66.9999
+                  </span>{" "}
+                  để nhận những phần quà hấp dẫn!🎁🎁🎁
+                </marquee>
+              </div>
             </div>
-          </div>
+          )}
           <div className="live_video">
             <div className="d-flex justify-content-between align-items-start main_video_live">
               <div className="video_match_live">
@@ -108,31 +119,47 @@ const LiveStream = () => {
               </div>
               <div className="iframe_video">
                 {!isMobile && (
-                  <div className="text-center py-1 kenh_chat">
+                  <div className="text-center kenh_chat">
                     <p className="m-0">KÊNH CHAT</p>
                   </div>
                 )}
                 {isMobile ? (
-                  <iframe
-                    className="mt-1"
-                    // src={`${process.env.REACT_APP_API_URL2}/${roomId}?token=${jwtToken}`}
-                    src="https://trxshbet.online"
-                    title="Live Stream"
-                    style={{
-                      width: "100%",
-                      height: "50%",
-                      borderRadius: "5px",
-                      allowtransparency: "yes",
-                      allow: "autoplay",
-                      frameborder: "0",
-                      marginheight: "0",
-                      marginwidth: "0",
-                      scrolling: "auto",
-                    }}
-                  ></iframe>
+                  <>
+                    <div className="midLive-container">
+                      <div className="midLive-home">
+                        <img src={homeIcon} alt="" />
+                      </div>
+                      <div className="midLive-chat">TRÒ CHUYỆN</div>
+                      <div className="midLive-logo">
+                        <img src={logo} alt="" />
+                      </div>
+                      <div className="midLive-join">
+                        <a href="#">THAM GIA NGAY</a>
+                      </div>
+                    </div>
+                    <div className="midLive-chatRoom">
+                      <iframe
+                        className=""
+                        src={`${process.env.REACT_APP_API_URL}/${roomId}?token=${jwtToken}`}
+                        // src="https://trxshbet.online"
+                        title="Live Stream"
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          borderRadius: "5px",
+                          allowtransparency: "yes",
+                          allow: "autoplay",
+                          frameborder: "0",
+                          marginheight: "0",
+                          marginwidth: "0",
+                          scrolling: "auto",
+                        }}
+                      ></iframe>
+                    </div>
+                  </>
                 ) : (
                   <iframe
-                    className="mt-1"
+                    className=""
                     // src={`${process.env.REACT_APP_API_URL2}/${roomId}?token=${jwtToken}`}
                     src="https://trxshbet.online"
                     title="Live Stream"
@@ -152,7 +179,6 @@ const LiveStream = () => {
               </div>
             </div>
           </div>
-
           {!isMobile && (
             <>
               <Infomatch dataLive={dataLive}></Infomatch>
